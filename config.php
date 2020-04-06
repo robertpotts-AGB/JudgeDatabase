@@ -1,8 +1,8 @@
 <?php
 // Database configuration
-$dbHost     = "localhost";
+$dbHost     = "127.0.0.1";
 $dbUsername = "root";
-$dbPassword = "";
+$dbPassword = "ianseo";
 $dbName     = "judgerecs";
 
 // Create database connection

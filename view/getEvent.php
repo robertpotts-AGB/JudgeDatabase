@@ -11,7 +11,7 @@
 <?php
 $q = ($_GET['q']);
 
-$con = mysqli_connect('localhost','root','','ianseo');
+$con = mysqli_connect('127.0.0.1','root','ianseo','ianseo');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
