@@ -69,3 +69,13 @@ input[type=submit] {
     text-decoration: none;
     color:white;
 }
+.deleteLink
+{
+    text-decoration:underline;
+    color:blue;
+}
+.deleteLink:hover
+{
+    cursor:pointer;
+    text-decoration:none;
+}

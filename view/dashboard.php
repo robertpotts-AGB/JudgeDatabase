@@ -67,14 +67,23 @@ echo '<p>';
         echo "<td>" . $row["EvStatus"] . "</td>";
         echo "<td>" . $row["EvRole"] . "</td>";
         echo "<td id='delrow'>" . '<a href="../view/deleterow.php?id='.$row['ID'].'" target="_blank ">Delete</a>' . "</td>";
-
+        echo "<td >".'<a class="deleteLink" onclick="deleteStudent('.$row['ID'].')">Delete</a>'."</td>";
 
     }
 }
 else
     echo "You have no shoots added yet";
 
+?>
+    <script>
+        function deleteStudent(id) {
+            $.post("delete.php" , {sid:id} , function(data){
+                $("#" + id).fadeOut('slow' , function(){$(this).remove();if(data)alert(data);});
+            });
 
+        }
+    </script>
+<?php
 
 include ('../common/footer.php');
 

@@ -28,6 +28,14 @@ else {
 ?>
 <html>
 <head>
+    <script>
+        function deleteStudent(id) {
+            $.post("./view/delete.php" , {sid:id} , function(data){
+                $("#" + id).fadeOut('slow' , function(){$(this).remove();if(data)alert(data);});
+            });
+
+        }
+    </script>
      <? if ($displayName !='') {
 echo '
 <link href="../CSS/headerstyle.css" rel="stylesheet" type="text/css" />
@@ -95,7 +103,7 @@ echo '
     }
     if ($Admin != '') {
         echo '
-           <td id="admin"> <a href = "../view/dashboard.php" > Admin Dashboard</a></td>
+           <td id="admin"> <a href = "../Admin/dashboard.php" > Admin Dashboard</a></td>
            <td id="admin"> <a href = "../view/exporter.php" > Upload New Judges </a></td>
            <td id="admin"> <a href = "../view/exporter.php" > Edit Current Judges </a></td>
            <td id="admin"> <a href = "../view/AdminExports.php" > Admin Exports</a></td>';
