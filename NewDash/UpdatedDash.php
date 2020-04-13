@@ -42,6 +42,7 @@ include ('../common/head.php');
 <script src="app/products/read-one-product.js"></script>
 <script src="app/products/update-product.js"></script>
 <script src="app/products/delete-product.js"></script>
+<script src="app/products/upload-product.js"></script>
 
 </body>
 </html>
