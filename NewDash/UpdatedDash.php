@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include include ('../common/head.php');
+include ('../common/head.php');
 ?>
 <head>
 
