@@ -5,7 +5,7 @@ $(document).ready(function(){
         <div class='container'>
  
             <div class='page-header'>
-                <h1 id='page-title'>Read Products</h1>
+                <h1 id='page-title'>My Shoots</h1>
             </div>
  
             <!-- this is where the contents will be shown. -->

@@ -18,6 +18,9 @@ function showProducts(){
     <div id='create-product' class='btn btn-primary pull-right m-b-15px create-product-button'>
         <span class='glyphicon glyphicon-plus'></span> Create Product
     </div>
+     <div id='upload-product' class='btn btn-sec pull-right m-b-15px upload-product-button'>
+        <span class='glyphicon glyphicon-list'></span> Upload Products
+    </div>
 <!-- start table -->
 <table class='table table-bordered table-hover'>
  
@@ -26,9 +29,9 @@ function showProducts(){
         <th class='w-5-pct'>Event Name</th>
         <th class='w-5-pct'>Date</th>
         <th class='w-5-pct'>Event Round</th>
-        <th class='w-5-pct'>Event org</th>
+        <th class='w-5-pct'>Event Rules</th>
         <th class='w-5-pct'>Event Level</th>
-        <th class='w-5-pct'>Event Disc</th>
+        <th class='w-5-pct'>Event Type</th>
         <th class='w-3-pct'>Event Role</th>
         <th class='w-3-pct'>Event Options</th>
         <th class='w-3-pct'>Event Status</th>
