@@ -1,16 +1,16 @@
 <?php
-namespace Phppot;
-session_start();
-require_once './config.php';
-include '../common/head.php';
-$JudgeID = $_SESSION['AGBNO'];
-use \Phppot\Member;
 
-//$connect = mysql_connect("localhost","root","ianseo");
-//mysql_select_db("ianseo",$connect); //select the table
+// get database connection
+include_once '../config/database.php';
+
+// instantiate product object
+include_once '../objects/shoots.php';
+
+$database = new Database();
+$db = $database->getConnection();
 
 
-if (isset($_POST["import"])) {
+if (isset($_POST["btn_upload"])) {
 
     $fileName = $_FILES["file"]["tmp_name"];
 
@@ -22,6 +22,7 @@ if (isset($_POST["import"])) {
         while (($fields = fgetcsv($file, 0, ",")) !== FALSE) {
             $count++;
             if ($count > 7) {
+                $stmt=$db->preare("INSERT into shootrec (AGBNo,EvName,EvRound,EvDate,EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole) values (:AGB,:EvNameSet,:EvRoundSet,:EvDateSet,:EvOrgSet,:EvLevelSet,:EvDisciplineSet,:EvOptionalSet,:EvStatusSet,:EvRoleSet)");
 
                 while (($column = fgetcsv($file, 10000, ",")) !== FALSE)  {
                     // split to date and time bits
@@ -97,11 +98,18 @@ if (isset($_POST["import"])) {
                         } elseif ($column[24] = 1) {
                             $EvRoleType = "Training";
                         }
+                        $stmt->bindParam(':AGB', "964787");
+                        $stmt->bindParam(':EvNameSet', $column[1]);
+                        $stmt->bindParam(':EvRoundSet', $column[1]);
+                        $stmt->bindParam(':EvDateSet', date("Y/n/j", strtotime(str_replace('/', '-', $column[0]))));
+                        $stmt->bindParam(':EvOrgSet', $EvOrgType);
+                        $stmt->bindParam(':EvLevelSet', $EvLevType);
+                        $stmt->bindParam(':EvDisciplineSet', $EvDiscType);
+                        $stmt->bindParam(':EvOptionalSet', $EvOptType);
+                        $stmt->bindParam(':EvStatusSet', $EvStatusType);
+                        $stmt->bindParam(':EvRoleSet', $EvRoleType);
 
-
-                        $sqlInsert = "INSERT into shootrec (AGBNo,EvName,EvRound,EvDate,EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole)
-                   values ('" . $JudgeID . "','" . $column[1] . "','" . $column[25] . "','" . date("Y/n/j", strtotime(str_replace('/', '-', $column[0]))) . "','" . $EvOrgType . "','" . $EvLevType . "','" . $EvDiscType . "','" . $EvOptType . "','" . $EvStatusType . "','" . $EvRoleType . "')";
-                        $result = mysqli_query($db, $sqlInsert);
+                        $stmt = $db->execute();
                     }
 
                     if (!empty($result)) {
@@ -116,32 +124,3 @@ if (isset($_POST["import"])) {
     }
 }
 ?>
-
-
-
-
-<p>
-    A template file can be downloaded from here:
-
-</p>
-
-<form class="form-horizontal" action="" method="post" name="uploadCSV"
-      enctype="multipart/form-data">
-    <div class="input-row">
-        <label class="col-md-4 control-label">Choose CSV File</label> <input
-                type="file" name="file" id="file" accept=".csv">
-        <button type="submit" id="submit" name="import"
-                class="btn-submit">Import</button>
-        <br />
-
-    </div>
-    <div id="labelError"></div>
-</form></form>
-
-
-<form action="view/Import.php" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <input type="file" id="file" name="file" accept=".csv," autocomplete="off" />
-    </div>
-    <input type="submit" name="btn_upload" class="btn btn-success" value="Upload">
-</form>

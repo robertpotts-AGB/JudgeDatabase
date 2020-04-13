@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     // show html form when 'upload product' button was clicked
-    $(document).on('click', '#.upload-product-button', function(){
+    $(document).on('click', '.upload-product-button', function(){
        alert("Click");
 
         var upload_product_php= `
@@ -11,17 +11,11 @@ $(document).ready(function(){
 
 </p>
 
-<form class="form-horizontal" action="" method="post" name="uploadCSV"
-      enctype="multipart/form-data">
-    <div class="input-row">
-        <label class="col-md-4 control-label">Choose CSV File</label> <input
-                type="file" name="file" id="file" accept=".csv">
-        <button type="submit" id="submit" name="import"
-                class="btn-submit">Import</button>
-        <br />
-
+<<form action="/api/product/import.php" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="file" id="file" name="file" accept=".csv," autocomplete="off" />
     </div>
-    <div id="labelError"></div>
+    <input type="submit" name="btn_upload" class="btn btn-success" value="Upload">
 </form>
         
        `;

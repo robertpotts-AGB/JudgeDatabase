@@ -1,16 +1,7 @@
 <?php
-namespace Phppot;
-session_start();
-require_once './config.php';
-include '../common/head.php';
-$JudgeID = $_SESSION['AGBNO'];
-use \Phppot\Member;
-
-//$connect = mysql_connect("localhost","root","ianseo");
-//mysql_select_db("ianseo",$connect); //select the table
 
 
-if (isset($_POST["import"])) {
+if (isset($_POST["btn_upload"])) {
 
     $fileName = $_FILES["file"]["tmp_name"];
 
@@ -116,32 +107,3 @@ if (isset($_POST["import"])) {
     }
 }
 ?>
-
-
-
-
-<p>
-    A template file can be downloaded from here:
-
-</p>
-
-<form class="form-horizontal" action="" method="post" name="uploadCSV"
-      enctype="multipart/form-data">
-    <div class="input-row">
-        <label class="col-md-4 control-label">Choose CSV File</label> <input
-                type="file" name="file" id="file" accept=".csv">
-        <button type="submit" id="submit" name="import"
-                class="btn-submit">Import</button>
-        <br />
-
-    </div>
-    <div id="labelError"></div>
-</form></form>
-
-
-<form action="view/Import.php" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <input type="file" id="file" name="file" accept=".csv," autocomplete="off" />
-    </div>
-    <input type="submit" name="btn_upload" class="btn btn-success" value="Upload">
-</form>
