@@ -79,7 +79,7 @@ read_products_html+=`</table>`;
 // inject to 'page-content' of our app
 $("#page-content").html(read_products_html)
 // chage page title
-changePageTitle("Read Products");
+changePageTitle("My Shoots");
 
     });
 }
