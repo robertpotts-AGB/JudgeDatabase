@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="pottsy webserver" uploadOnCheckin="08f44fc6-aa5e-435b-85a0-af1059d41700">
+    <serverData>
+      <paths name="pottsy webserver">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="pottsy webserver" />
+  </component>
+</project>

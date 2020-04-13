@@ -16,8 +16,7 @@ include ('../common/head.php');
 
     <!-- custom CSS -->
     <link href="app/assets/css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../CSS/formstyle.css">
-    <link href="headerstyle.css" rel="stylesheet" type="text/css" />
+
 
 </head>
 <body>
