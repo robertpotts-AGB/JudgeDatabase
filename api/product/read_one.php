@@ -26,9 +26,16 @@ $product->readOne();
 if($product->EvName!=null){
     // create array
     $product_arr = array(
-        "id" =>  $product->ID,
+        "ID" =>  $product->ID,
         "EvName" => $product->EvName,
         "EvRound" => $product->EvRound,
+        "EvOrg" => $product->EvOrg,
+        "EvDiscipline" => $product->EvDiscipline,
+        "EvDate" => $product->EvDate,
+        "EvStatus" => $product->EvStatus,
+        "EvRole" => $product->EvRole,
+        "EvLevel" => $product->EvLevel,
+        "EvOptional" => $product->EvOptional,
         );
 
     // set response code - 200 OK

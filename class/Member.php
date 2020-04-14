@@ -1,6 +1,5 @@
 <?php
 namespace Phppot;
-
 use \Phppot\DataSource;
 
 class Member

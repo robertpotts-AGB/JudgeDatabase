@@ -90,32 +90,45 @@ class Product
     function update(){
 
         // update query
-        $query = "UPDATE
-                " . $this->table_name . "
+        $query = "UPDATE shootrec
             SET
-                name = :name,
-                price = :price,
-                description = :description,
-                category_id = :category_id
+                EvName=:EvName, 
+                EvRound=:EvRound, 
+                EvDate=:EvDate, 
+                EvOrg=:EvOrg, 
+                EvLevel=:EvLevel, 
+                EvDiscipline=:EvDiscipline, 
+                EvOptional=:EvOptional, 
+                EvStatus=:EvStatus, 
+                EvRole=:EvRole
             WHERE
-                id = :id";
+                ID = :ID";
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
 
         // sanitize
-        $this->name=htmlspecialchars(strip_tags($this->name));
-        $this->price=htmlspecialchars(strip_tags($this->price));
-        $this->description=htmlspecialchars(strip_tags($this->description));
-        $this->category_id=htmlspecialchars(strip_tags($this->category_id));
-        $this->id=htmlspecialchars(strip_tags($this->id));
+        $this->EvName=htmlspecialchars(strip_tags($this->EvName));
+        $this->EvRound=htmlspecialchars(strip_tags($this->EvRound));
+        $this->EvDate=htmlspecialchars(strip_tags($this->EvDate));
+        $this->EvOrg=htmlspecialchars(strip_tags($this->EvOrg));
+        $this->EvLevel=htmlspecialchars(strip_tags($this->EvLevel));
+        $this->EvDiscipline=htmlspecialchars(strip_tags($this->EvDiscipline));
+        $this->EvOptional=htmlspecialchars(strip_tags($this->EvOptional));
+        $this->EvStatus=htmlspecialchars(strip_tags($this->EvStatus));
+        $this->EvRole=htmlspecialchars(strip_tags($this->EvRole));
 
         // bind new values
-        $stmt->bindParam(':name', $this->name);
-        $stmt->bindParam(':price', $this->price);
-        $stmt->bindParam(':description', $this->description);
-        $stmt->bindParam(':category_id', $this->category_id);
-        $stmt->bindParam(':id', $this->id);
+        $stmt->bindParam(":EvName", $this->EvName);
+        $stmt->bindParam(":EvRound", $this->EvRound);
+        $stmt->bindParam(":EvDate", $this->EvDate);
+        $stmt->bindParam(":EvOrg", $this->EvOrg);
+        $stmt->bindParam(":EvLevel", $this->EvLevel);
+        $stmt->bindParam(":EvDiscipline", $this->EvDiscipline);
+        $stmt->bindParam(":EvOptional", $this->EvOptional);
+        $stmt->bindParam(":EvStatus", $this->EvStatus);
+        $stmt->bindParam(":EvRole", $this->EvRole);
+        $stmt->bindParam(':ID', $this->ID);
 
         // execute the query
         if($stmt->execute()){
@@ -151,7 +164,7 @@ class Product
 
         // query to read single record
         $query = "SELECT
-             ID, EvName, EvRound
+             ID,EvName,EvRound,EvDate,EvOrg,EvLevel,EvDiscipline,EvRole,EvOptional,EvStatus
             FROM
                 shootrec
             WHERE
@@ -175,6 +188,13 @@ class Product
         $this->ID = $row['ID'];
         $this->EvName = $row['EvName'];
         $this->EvRound = $row['EvRound'];
+        $this->EvOrg = $row['EvOrg'];
+        $this->EvLevel = $row['EvLevel'];
+        $this->EvDiscipline = $row['EvDiscipline'];
+        $this->EvRole = $row['EvRole'];
+        $this->EvOptional = $row['EvOptional'];
+        $this->EvDate = $row['EvDate'];
+        $this->EvStatus = $row['EvStatus'];
 
     }
 }

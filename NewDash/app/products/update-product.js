@@ -10,40 +10,63 @@ $(document).ready(function(){
             // values will be used to fill out our form
             var name = data.EvName;
             var round = data.EvRound;
-            var id = data.id;
-
-
-
-
+            var id = data.ID;
+            var date = data.EvDate;
+            var optional = data.EvOptional;
+            var disc = data.EvDiscipline;
+            var status = data.EvStatus;
+            var role = data.EvRole;
+            var org = data.EvOrg;
+            var level = data.EvLevel;
 
             // store 'update product' html to this variable
             var update_product_html=`
     <div id='read-products' class='btn btn-primary pull-right m-b-15px read-products-button'>
         <span class='glyphicon glyphicon-list'></span> My Shoots
     </div>
-        });
+      <!--  }); -->
         <!-- build 'update product' html form -->
 <!-- we used the 'required' html5 property to prevent empty fields -->
 <form id='update-product-form' action='#' method='post' border='0'>
     <table class='table table-hover table-responsive table-bordered'>
- 
-        <!-- name field -->
+        <tr>
+            <td>Date</td>
+              <td><input value=\"` + date + `\" type='Date' name='EvDate' class='form-control' required /></td>
+        </tr>
         <tr>
             <td>Name</td>
-            <td><input value=\"` + name + `\" type='text' name='Name' class='form-control' required /></td>
+            <td><input value=\"` + name + `\" type='text' name='EvName' class='form-control' required /></td>
         </tr>
- 
-        <!-- price field -->
         <tr>
             <td>Round</td>
-            <td><input value=\"` + round + `\" type='text' name='Round' class='form-control' required /></td>
+            <td><input value=\"` + round + `\" type='text' name='EvRound' class='form-control' required /></td>
         </tr>
- 
-        <!-- description field -->
         <tr>
-            <td>Description</td>
-            <td><textarea name='description' class='form-control' required>` + id + `</textarea></td>
+            <td>Type</td>
+            <td><input value=\"` + disc + `\" type='text' name='EvDiscipline' class='form-control' required /></td>
         </tr>
+        <tr>
+            <td>Status</td>
+            <td><input value=\"` + status + `\" type='text' name='EvStatus' class='form-control' required /></td>
+        </tr>
+        <tr>
+            <td>Role</td>
+            <td><input value=\"` + role + `\" type='text' name='EvRole' class='form-control' required /></td>
+        </tr>
+        <tr>
+            <td>Rules</td>
+            <td><input value=\"` + org + `\" type='text' name='EvOrg' class='form-control' required /></td>
+        </tr>
+        <tr>
+            <td>Level</td>
+            <td><input value=\"` + level + `\" type='text' name='EvLevel' class='form-control' required /></td>
+        </tr>
+        <tr>
+            <td>Optional</td>
+            <td><textarea name='EvOptional' class='form-control' required>` + optional + `</textarea></td>
+        </tr>
+        
+       
  
         <!-- categories 'select' field -->
        
@@ -51,7 +74,7 @@ $(document).ready(function(){
         <tr>
  
             <!-- hidden 'product id' to identify which record to delete -->
-            <td><input value=\"` + id + `\" name='id' type='hidden' /></td>
+            <td><input value=\"` + id + `\" name='ID' type='hidden' /></td>
  
             <!-- button to submit form -->
             <td>
@@ -82,20 +105,22 @@ $(document).ready(function(){
             var form_data=JSON.stringify($(this).serializeObject());
             // submit form data to api
             $.ajax({
-                url: "http://localhost/api/product/update.php",
+                url: "http://localhost/JudgeDatabase/api/product/update.php",
                 type : "POST",
                 contentType : 'application/json',
+                async: false,
                 data : form_data,
-                success : function(result) {
+               /* success : function(result) {
                     // product was created, go back to products list
                     showProducts();
                 },
                 error: function(xhr, resp, text) {
                     // show error to console
                     console.log(xhr, resp, text);
-                }
+                }*/
             });
 
             return false;
         });
+
 });

@@ -1,6 +1,8 @@
 <?php
 namespace Phppot;
 
+use mysqli;
+
 /**
  * Generic datasource class for handling DB operations.
  * Uses MySqli and PreparedStatements.
@@ -41,11 +43,11 @@ class DataSource
      * If connection object is needed use this method and get access to it.
      * Otherwise, use the below methods for insert / update / etc.
      *
-     * @return \mysqli
+     * @return mysqli
      */
     public function getConnection()
     {
-        $conn = new \mysqli(self::HOST, self::USERNAME, self::PASSWORD, self::DATABASENAME);
+        $conn = new mysqli(self::HOST, self::USERNAME, self::PASSWORD, self::DATABASENAME);
         
         if (mysqli_connect_errno()) {
             trigger_error("Problem with connecting to database.");
