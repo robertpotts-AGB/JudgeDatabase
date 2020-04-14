@@ -20,15 +20,7 @@ $displayName=($_SESSION["username"]);
                 }
                 ?>
             </td>
-        <td id="entershoot" align="right">
-            <? if ($displayName !=''){
-            echo ' ';
-            }
-            else{
-                echo' <a href="./ShootInput.php">Enter a shoot without logging in </a>';
-            }
-            ?>
-        </td>
+
             <? if ($displayName !=''){
                 echo  '<td id="expsht" width="10%" textalign=Right>';
                 echo  '';
@@ -46,32 +38,7 @@ $displayName=($_SESSION["username"]);
         </tr>
 </table>
 <p></p>
-    <table id=menutable class="MenuTable" >
-    <? if ($displayName !='') {
-    echo '
-    <tr >
-        <td> <a href = "../view/ShootInput.php" > Enter a shoot </a></td>
-       <td> <a href = "../view/exporter.php" > Export Shoots </a></td>
-       <td> <a href = "../view/ShootImport.php" > Upload My Shoots </a></td>
-       <td> <a href = "../view/dashboard.php" > My Shoots</a></td>';
 
-    if ($JLO != '') {
-        echo '
-           <td id="jlo"> <a href = "../view/JLO/JLOdashboard.php" > JLO Dashboard</a></td>
-           <td id="jlo"> <a href = "../view/JLO/JLOExport.php" > JLO Export</a></td>';
-    }
-    if ($Admin != '') {
-        echo '
-           <td id="admin"> <a href = "../Admin/dashboard.php" > Admin Dashboard</a></td>
-           <td id="admin"> <a href = "../view/exporter.php" > Upload New Judges </a></td>
-           <td id="admin"> <a href = "../view/exporter.php" > Edit Current Judges </a></td>
-           <td id="admin"> <a href = "../view/AdminExports.php" > Admin Exports</a></td>';
-    }
-}
-      echo ' 
- 
-     </tr >
-</table >';
 
 
 
