@@ -1,8 +1,20 @@
+<?php session_start();
+
+if(!isset($_SESSION['username'])){
+//User not logged in. Redirect them back to the login.php page.
+    header('Location: login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <?php
+
+
 include ('../common/head.php');
 ?>
+
 <head>
 
     <meta charset="utf-8">

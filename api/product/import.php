@@ -98,7 +98,7 @@ if (isset($_POST["btn_upload"])) {
                         } elseif ($column[24] != "") {
                             $EvRoleType = "Training";
                         }
-                        $AGBNUMBER = "964787";
+                        $AGBNUMBER = ($_SESSION["username"]);
                         //convert date to Import Date
                         $ShootDate=DateTime::createFromFormat('n/j/Y',$column[0]);
                         $importDate = $ShootDate->format('Y-m-d');
@@ -119,10 +119,10 @@ if (isset($_POST["btn_upload"])) {
                     }
 
                     if (!empty($result)) {
-                        header("Location: ./NewDash/UpdatedDash.php");
+                        header("Location: /JudgeDatabase/NewDash/UpdatedDash.php");
                     } else {
 
-                        header("Location: ./NewDash/UpdatedDash.php");;
+                        header("Location: /JudgeDatabase/NewDash/UpdatedDash.php");
                     }
 
                 } }

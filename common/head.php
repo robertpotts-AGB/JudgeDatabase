@@ -1,54 +1,13 @@
 <?
-namespace Phppot;
+session_start();
 //include 'config.php';
 use \Phppot\Member;
 require_once(dirname(dirname(__FILE__)) . '/class/Member.php');
+$displayName=($_SESSION["username"]);
 
-if (! empty($_SESSION["userId"])) {
-    //require_once _DIR_ '../class/Member.php';
-
-    $member = new Member();
-    $memberResult = $member->getMemberById($_SESSION["userId"]);
-    if(!empty($memberResult[0]["display_name"])) {
-        $displayName = ucwords($memberResult[0]["display_name"]);
-        $agbno = ($memberResult[0]["agb_no"]);
-        $JLO = ($memberResult[0]["isJLO"]);
-        $Admin = ($memberResult[0]["isAdmin"]);
-        $region = ($memberResult[0]["region"]);
-    } else {
-        $displayName = $memberResult[0]["user_name"];
-        $agbno = ($memberResult[0]["agb_no"]);
-    }
-    $_SESSION['AGBNO'] = ($memberResult[0]["agb_no"]);
-    $_SESSION['REGION'] = ($memberResult[0]["region"]);
-}
-else {
-    $displayName = '';
-}
 ?>
 <html>
-<head>
-    <script>
-        function deleteStudent(id) {
-            $.post("./view/delete.php" , {sid:id} , function(data){
-                $("#" + id).fadeOut('slow' , function(){$(this).remove();if(data)alert(data);});
-            });
 
-        }
-    </script>
-     <? if ($displayName !='') {
-echo '
-<link href="../CSS/headerstyle.css" rel="stylesheet" type="text/css" />
-<link href="../view/css/headerstyle.css" rel="stylesheet" type="text/css" />';
-} else {
-   echo' <link href="./CSS/headerstyle.css" rel="stylesheet" type="text/css" />
-<link href="./view/css/headerstyle.css" rel="stylesheet" type="text/css" />';
-
-     }
-    ?>
-
-
-</head>
 <body>
 <table class="headertable">
         <tr>
@@ -75,7 +34,7 @@ echo '
                 echo  '';
                 echo '</td>';
            echo  '<td id="logoutbtn" width="10%" textalign=Right>';
-           echo  '<a href="../logout.php" class="logout-button">Logout</a>';
+           echo  '<a href="./logout.php" class="logout-button">Logout</a>';
            echo '</td>';
 
     }

@@ -110,14 +110,15 @@ $(document).ready(function(){
                 contentType : 'application/json',
                 async: false,
                 data : form_data,
-               /* success : function(result) {
+                dataType:"text",
+                success : function(result) {
                     // product was created, go back to products list
                     showProducts();
                 },
                 error: function(xhr, resp, text) {
                     // show error to console
                     console.log(xhr, resp, text);
-                }*/
+                }
             });
 
             return false;

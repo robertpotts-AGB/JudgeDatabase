@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class Product
 {
 
@@ -26,12 +26,14 @@ class Product
         $this->conn = $db;
     }
     function read(){
-
+        $username = ($_SESSION["username"]);
         // select all query
         $query = "SELECT
                 ID, AGBNo, EvName, EvRound, EvDate, EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole
             FROM
                 shootrec
+                WHERE
+                AGBNo ='$username'
             ORDER BY
                 EvDate DESC";
 
