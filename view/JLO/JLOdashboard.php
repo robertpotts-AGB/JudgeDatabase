@@ -6,7 +6,7 @@ use \Phppot\Member;
 
 $agbno = $_SESSION['REGION'];
 
-include ('../common/head.php');
+include('../common/head.php');
 ?>
 
 
@@ -19,7 +19,7 @@ $shrecs = $db->query($recordqry);
 
 ?>
 
-<link rel="stylesheet" type="text/css" href="../CSS/formstyle.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/formstyle.css">
 
 
 <?php
@@ -62,7 +62,7 @@ else
 
 
 
-include ('../common/footer.php');
+include('../common/footer.php');
 
 
 
