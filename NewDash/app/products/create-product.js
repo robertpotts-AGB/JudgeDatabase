@@ -40,18 +40,30 @@ $(document).ready(function(){
         <!-- price field -->
         <tr>
             <td>Shoot Rules</td>
-            <td><input type='text' name='EvOrg' class='form-control' required /></td>
+             <td><select name='EvOrg' class='form-control' required>
+                <option value="">...Select</option>
+                <option value="AGB">AGB</option>
+                <option value="WA">WA</option>
+                <option value="Training">Training</option>
+              </select></td>
         </tr>
  
         <!-- description field -->
        <tr>
             <td>Event Level</td>
-            <td><input type='text' name='EvLevel' class='form-control' required /></td>
+             <td><select name='EvLevel' class='form-control' required>
+                <option value="">...Select</option>
+                <option value="International">International</option>
+                <option value="National">National</option>
+                <option value="Regional">Regional</option>
+                <option value="County">County</option>
+                <option value="Club">Club</option>
+              </select></td>
         </tr>
           <tr>
             <td>Event Type</td>
-         
             <td><select name='EvDiscipline' class='form-control' required>
+                <option value="">...Select</option>
                 <option value="Target">Target</option>
                 <option value="Field">Field</option>
                 <option value="Clout">Clout</option>
