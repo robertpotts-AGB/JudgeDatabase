@@ -2,7 +2,7 @@
 namespace Phppot;
 //include 'config.php';
 use \Phppot\Member;
-require_once(dirname(dirname(__FILE__)).'/class/Member.php');
+require_once(dirname(dirname(__FILE__)) . '/class/Member.php');
 
 if (! empty($_SESSION["userId"])) {
     //require_once _DIR_ '../class/Member.php';
@@ -98,8 +98,8 @@ echo '
 
     if ($JLO != '') {
         echo '
-           <td id="jlo"> <a href = "../JLO/JLOdashboard.php" > JLO Dashboard</a></td>
-           <td id="jlo"> <a href = "../JLO/JLOExport.php" > JLO Export</a></td>';
+           <td id="jlo"> <a href = "../view/JLO/JLOdashboard.php" > JLO Dashboard</a></td>
+           <td id="jlo"> <a href = "../view/JLO/JLOExport.php" > JLO Export</a></td>';
     }
     if ($Admin != '') {
         echo '
