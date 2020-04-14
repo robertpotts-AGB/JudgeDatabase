@@ -22,14 +22,14 @@ $(document).ready(function(){
                 if(result==true){
                     // send delete request to api / remote server
                     $.ajax({
-                        url: "http://localhost/JudgeDatabase/api/product/delete.php",
+                        url: "/JudgeDatabase/api/product/delete.php",
                         type: "POST",
                         async: false,
                         dataType: 'json',
                         data: JSON.stringify({ID: product_id}),
                     });
                     showProducts();
-                    };
+                    }
 
                 }
 

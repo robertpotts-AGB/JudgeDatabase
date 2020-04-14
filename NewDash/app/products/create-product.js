@@ -97,7 +97,7 @@ $(document).ready(function(){
         var form_data=JSON.stringify($(this).serializeObject());
 // submit form data to api
         $.ajax({
-            url: "http://localhost/JudgeDatabase/api/product/create.php",
+            url: "/JudgeDatabase/api/product/create.php",
             type : "POST",
             contentType : 'application/json',
             data : form_data,
