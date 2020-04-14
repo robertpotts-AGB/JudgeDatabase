@@ -14,13 +14,13 @@ include_once '../objects/shoots.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// prepare product object
+// prepare shootrecords object
 $product = new Product($db);
 
 // set ID property of record to read
 $product->ID = isset($_GET['id']) ? $_GET['id'] : die();
 
-// read the details of product to be edited
+// read the details of shootrecords to be edited
 $product->readOne();
 
 if($product->EvName!=null){
@@ -49,7 +49,7 @@ else{
     // set response code - 404 Not found
   //  http_response_code(404);
 
-    // tell the user product does not exist
+    // tell the user shootrecords does not exist
     echo json_encode(array("message" => "Product does not exist."));
 }
 ?>

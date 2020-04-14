@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-    // show html form when 'upload product' button was clicked
-    $(document).on('click', '.upload-product-button', function(){
+    // show html form when 'upload shootrecords' button was clicked
+    $(document).on('click', '.upload-shootrecords-button', function(){
 
         var upload_product_php= `
         
@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 </p>
 
-<form action="../api/product/import.php" method="post" enctype="multipart/form-data">
+<form action="../api/shootrecords/import.php" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <input type="file" id="file" name="file" accept=".csv," autocomplete="off" />
     </div>

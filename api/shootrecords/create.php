@@ -10,7 +10,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 // get database connection
 include_once '../config/database.php';
 
-// instantiate product object
+// instantiate shootrecords object
 include_once '../objects/shoots.php';
 
 $database = new Database();
@@ -35,7 +35,7 @@ if (
     !empty($data->EvRole)
 ) {
 
-    // set product property values
+    // set shootrecords property values
     $product->AGBNo = ($_SESSION["username"]);
     $product->EvName = $data->EvName;
     $product->EvRound = $data->EvRound;
@@ -47,7 +47,7 @@ if (
     $product->EvStatus = $data->EvStatus;
     $product->EvRole = $data->EvRole;
 
-    // create the product
+    // create the shootrecords
     if ($product->create()) {
 
         // set response code - 201 created
@@ -55,7 +55,7 @@ if (
 
         // tell the user
         echo json_encode(array("message" => "Shoot Added."));
-    } // if unable to create the product, tell the user
+    } // if unable to create the shootrecords, tell the user
     else {
 
         // set response code - 503 service unavailable
@@ -71,5 +71,5 @@ else {
     http_response_code(400);
 
     // tell the user
-    echo json_encode(array("message" => "Unable to create product. Data is incomplete."));
+    echo json_encode(array("message" => "Unable to create shootrecords. Data is incomplete."));
 }

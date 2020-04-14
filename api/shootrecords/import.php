@@ -3,7 +3,7 @@
 // get database connection
 include_once '../config/database.php';
 
-// instantiate product object
+// instantiate shootrecords object
 include_once '../objects/shoots.php';
 
 $database = new Database();

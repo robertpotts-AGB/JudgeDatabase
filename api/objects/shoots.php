@@ -45,7 +45,7 @@ class Product
 
         return $stmt;
     }
-    // create product
+    // create shootrecords
     function create(){
 
         // query to insert record
@@ -88,7 +88,7 @@ class Product
         return false;
 
     }
-    // update the product
+    // update the shootrecords
     function update(){
 
         // update query
@@ -139,7 +139,7 @@ class Product
 
         return false;
     }
-    // delete the product
+    // delete the shootrecords
     function delete(){
 
         // delete query
@@ -161,7 +161,7 @@ class Product
 
         return false;
     }
-    // used when filling up the update product form
+    // used when filling up the update shootrecords form
     function readOne(){
 
         // query to read single record
@@ -177,7 +177,7 @@ class Product
         // prepare query statement
         $stmt = $this->conn->prepare( $query );
 
-        // bind id of product to be updated
+        // bind id of shootrecords to be updated
         $stmt->bindParam(1, $this->ID);
 
         // execute query

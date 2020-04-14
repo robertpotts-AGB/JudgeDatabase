@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-    // show html form when 'create product' button was clicked
-    $(document).on('click', '.create-product-button', function(){
+    // show html form when 'create shootrecords' button was clicked
+    $(document).on('click', '.create-shootrecords-button', function(){
 // load list of categories
-        $.getJSON("http://localhost/JudgeDatabase/api/product/read.php", function(data){
+        $.getJSON("/JudgeDatabase/api/shootrecords/read.php", function(data){
 // build categories option html
 // loop through returned list of data
             var categories_options_html=`<select name='category_id' class='form-control'>`;
@@ -11,7 +11,7 @@ $(document).ready(function(){
                 categories_options_html+=`<option value='` + val.id + `'>` + val.name + `</option>`;
             });
             categories_options_html+=`</select>`;
-            // we have our html form here where product information will be entered
+            // we have our html form here where shootrecords information will be entered
 // we used the 'required' html5 property to prevent empty fields
             var create_product_html=`
  
@@ -19,7 +19,7 @@ $(document).ready(function(){
     <div id='read-products' class='btn btn-primary pull-right m-b-15px read-products-button'>
         <span class='glyphicon glyphicon-list'></span> My Shoots
     </div>
-    <!-- 'create product' html form -->
+    <!-- 'create shootrecords' html form -->
 <form id='create-product-form' action='#' method='post' border='0'>
     <table class='table table-hover table-responsive table-bordered'>
         <!-- name field -->
@@ -88,19 +88,19 @@ $(document).ready(function(){
 
     });
 
-// will run if create product form was submitted
-    $(document).on('submit', '#create-product-form', function(){
+// will run if create shootrecords form was submitted
+    $(document).on('submit', '#create-shootrecords-form', function(){
 // get form data
         var form_data=JSON.stringify($(this).serializeObject());
 // submit form data to api
         $.ajax({
-            url: "/JudgeDatabase/api/product/create.php",
+            url: "/JudgeDatabase/api/shootrecords/create.php",
             type : "POST",
             contentType : 'application/json',
             data : form_data,
             dataType:"text",
             success : function(result) {
-                // product was created, go back to products list
+                // shootrecords was created, go back to products list
                 showProducts();
             },
             error: function(xhr, resp, text) {

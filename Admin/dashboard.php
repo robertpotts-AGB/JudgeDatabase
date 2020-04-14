@@ -2,7 +2,7 @@
 <?php
 
 
-$api_url = 'http://localhost/JudgeDatabase/api/product/read.php';
+$api_url = 'http://localhost/JudgeDatabase/api/shootrecords/read.php';
 
 // Read JSON file
 $json_data = file_get_contents($api_url);

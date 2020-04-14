@@ -9,7 +9,7 @@ header("Content-Type: application/json; charset=UTF-8");
 include_once '../config/database.php';
 include_once '../objects/shoots.php';
 
-// instantiate database and product object
+// instantiate database and shootrecords object
 $database = new Database();
 $db = $database->getConnection();
 
