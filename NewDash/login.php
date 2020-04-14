@@ -1,6 +1,8 @@
 <?php
 session_start();
 include '../api/config/database.php';
+include '../common/head.php';
+
 try
 {
     $database = new Database();
@@ -42,7 +44,7 @@ catch(PDOException $error)
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Webslesson Tutorial | PHP Login Script using PDO</title>
+    <title>Judge Login Page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -56,7 +58,7 @@ catch(PDOException $error)
         echo '<label class="text-danger">'.$message.'</label>';
     }
     ?>
-    <h3 align="">PHP Login Script using PDO</h3><br />
+    <h3 align="">Judge Database Login</h3><br />
     <form method="post">
         <label>Username</label>
         <input type="text" name="username" class="form-control" />
