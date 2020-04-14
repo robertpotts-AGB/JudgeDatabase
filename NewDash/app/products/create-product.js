@@ -75,11 +75,24 @@ $(document).ready(function(){
         </tr>
           <tr>
             <td>Event Status</td>
-            <td><input type='text' name='EvStatus' class='form-control' required /></td>
+         
+             <td><select name='EvStatus' class='form-control' required>
+                <option value="">...Select</option>
+                <option value="WRS">World Record Status / Arrowhead</option>
+                <option value="UKRS">UK Record Status / Tassel Award</option>
+                <option value="Non-Record">Non-Record Status</option>
+              </select></td>
         </tr>
           <tr>
             <td>Event Role</td>
-            <td><input type='text' name='EvRole' class='form-control' required /></td>
+            <td><select name='EvRole' class='form-control' required>
+                <option value="">...Select</option>
+                <option value="COJ">Chair of Judges</option>
+                <option value="DOS">Director of Shoots</option>
+                <option value="Judge">Judge</option>
+                <option value="Trainer">Trainer</option>
+                <option value="Attendee">Attendee</option>
+              </select></td>
         </tr>
  
         <!-- categories 'select' field -->
