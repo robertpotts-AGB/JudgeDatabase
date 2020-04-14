@@ -199,4 +199,23 @@ class Product
         $this->EvStatus = $row['EvStatus'];
 
     }
+    function readJLO(){
+        $username = ($_SESSION["username"]);
+        $Region=($_SESSION["region"]);
+        // select all query
+        $query = "SELECT shootrec.ID, AGBNo, EvName, EvRound, EvDate, EvOrg, EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole,region,display_name
+            FROM shootrec, registered_users
+            WHERE AGBNo = agb_no AND region = '$Region'
+            ORDER BY
+                EvDate DESC";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
+
 }

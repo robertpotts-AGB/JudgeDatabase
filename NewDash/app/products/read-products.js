@@ -21,6 +21,9 @@ function showProducts(){
      <div id='upload-product' class='btn btn-primary pull-right m-b-15px upload-shootrecords-button'>
         <span class='glyphicon glyphicon-list'></span> Upload Shoots
     </div>
+      <div id='read-JLO' class='btn btn-primary pull-right m-b-15px readJLO-products-button'>
+        <span class='glyphicon glyphicon-list'></span> JLO Shoots
+    </div>
 <!-- start table -->
 <table class='table table-bordered table-hover'>
  

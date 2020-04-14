@@ -27,6 +27,7 @@ try
             if($count > 0)
             {
                 $_SESSION["username"] = $_POST["username"];
+                $_SESSION["region"] = "SCAS";
                 header("location:UpdatedDash.php");
             }
             else
