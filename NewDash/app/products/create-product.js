@@ -20,7 +20,7 @@ $(document).ready(function(){
         <span class='glyphicon glyphicon-list'></span> My Shoots
     </div>
     <!-- 'create shootrecords' html form -->
-<form id='create-product-form' action='#' method='post' border='0'>
+<form id='create-shootrecords-form' action='#' method='post' border='0'>
     <table class='table table-hover table-responsive table-bordered'>
         <!-- name field -->
  

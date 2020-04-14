@@ -27,7 +27,7 @@ $(document).ready(function(){
       <!--  }); -->
         <!-- build 'update shootrecords' html form -->
 <!-- we used the 'required' html5 property to prevent empty fields -->
-<form id='update-product-form' action='#' method='post' border='0'>
+<form id='update-shootrecords-form' action='#' method='post' border='0'>
     <table class='table table-hover table-responsive table-bordered'>
         <tr>
             <td>Date</td>
