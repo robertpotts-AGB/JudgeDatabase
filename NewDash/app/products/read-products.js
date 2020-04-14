@@ -26,16 +26,16 @@ function showProducts(){
  
     <!-- creating our table heading -->
     <tr>
-        <th class='w-5-pct'>Event Name</th>
         <th class='w-5-pct'>Date</th>
+        <th class='w-5-pct'>Event Name</th>
         <th class='w-5-pct'>Event Round</th>
-        <th class='w-5-pct'>Event Rules</th>
+        <th class='w-3-pct'>Rules</th>
         <th class='w-5-pct'>Event Level</th>
         <th class='w-5-pct'>Event Type</th>
-        <th class='w-3-pct'>Event Role</th>
+        <th class='w-3-pct'>Role</th>
         <th class='w-3-pct'>Event Options</th>
-        <th class='w-3-pct'>Event Status</th>
-        <th class='w-15-pct text-align-center'>Action</th>
+        <th class='w-3-pct'>Status</th>
+        <th class='w-10-pct text-align-center'>Action</th>
     </tr>`;
      
 // loop through returned list of data
@@ -44,9 +44,8 @@ $.each(data.records, function(key, val) {
     // creating new table row per record
     read_products_html+=`
         <tr>
- 
-            <td>` + val.EvName + `</td>
             <td>` + val.EvDate + `</td>
+            <td>` + val.EvName + `</td>
             <td>` + val.EvRound + `</td>
             <td>` + val.EvOrg + `</td>
             <td>` + val.EvLevel + `</td>
@@ -60,17 +59,17 @@ $.each(data.records, function(key, val) {
             <!-- 'action' buttons -->
             <td>
                 <!-- read product button -->
-             <!--   <button class='btn btn-primary m-r-5px read-one-product-button' data-id='` + val.id + `'>
+             <!--   <button class='btn btn-primary m-r-5px read-one-product-button' data-id='` + val.ID + `'>
                     <span class='glyphicon glyphicon-eye-open'></span> Read
                 </button> -->
  
                 <!-- edit button -->
-                <button class='btn btn-info m-r-5px update-product-button' data-id='` + val.id + `'>
+                <button class='btn btn-info m-r-5px update-product-button' data-id='` + val.ID + `'>
                     <span class='glyphicon glyphicon-edit'></span> Edit
                 </button>
  
                 <!-- delete button -->
-                <button class='btn btn-danger delete-product-button' data-id='` + val.id + `'>
+                <button class='btn btn-danger delete-product-button' data-id='` + val.ID + `'>
                     <span class='glyphicon glyphicon-remove'></span> Delete
                 </button>
             </td>
