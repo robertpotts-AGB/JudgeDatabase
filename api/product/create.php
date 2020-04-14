@@ -53,7 +53,7 @@ if (
         http_response_code(201);
 
         // tell the user
-        echo json_encode(array("message" => "Product was created."));
+        echo json_encode(array("message" => "Shoot Added."));
     } // if unable to create the product, tell the user
     else {
 
@@ -61,7 +61,7 @@ if (
         http_response_code(503);
 
         // tell the user
-        echo json_encode(array("message" => "Unable to create product."));
+        echo json_encode(array("message" => "Unable to create shoot."));
     }
 } // tell the user data is incomplete
 else {

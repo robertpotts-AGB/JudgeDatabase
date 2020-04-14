@@ -22,7 +22,7 @@ if (isset($_POST["btn_upload"])) {
         while (($fields = fgetcsv($file, 0, ",")) !== FALSE) {
             $count++;
             if ($count > 7) {
-                $stmt=$db->preare("INSERT into shootrec (AGBNo,EvName,EvRound,EvDate,EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole) values (:AGB,:EvNameSet,:EvRoundSet,:EvDateSet,:EvOrgSet,:EvLevelSet,:EvDisciplineSet,:EvOptionalSet,:EvStatusSet,:EvRoleSet)");
+                $stmt=$db->prepare("INSERT into shootrec (AGBNo,EvName,EvRound,EvDate,EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole) values (:AGB,:EvNameSet,:EvRoundSet,:EvDateSet,:EvOrgSet,:EvLevelSet,:EvDisciplineSet,:EvOptionalSet,:EvStatusSet,:EvRoleSet)");
 
                 while (($column = fgetcsv($file, 10000, ",")) !== FALSE)  {
                     // split to date and time bits
@@ -32,76 +32,82 @@ if (isset($_POST["btn_upload"])) {
                     //Handle EVOrg Type
                     if($column[1] != "") {
                         $EvOrgType = "";
-                        if ($column[2] = 1) {
+                        if ($column[2] != "") {
                             $EvOrgType = "WA";
-                        } elseif ($column[3] = 1) {
+                        } elseif ($column[3] != "") {
                             $EvOrgType = "AGB";
-                        } elseif ($column[4] = 1) {
+                        } elseif ($column[4] != "") {
                             $EvOrgType = "Training";
                         }
                         //Handle EvLevelType
                         $EvLevType = "";
-                        if ($column[5] = 1) {
+                        if ($column[5] != "") {
                             $EvLevType = "International";
-                        } elseif ($column[6] = 1) {
+                        } elseif ($column[6] != "") {
                             $EvLevType = "Natonal";
-                        } elseif ($column[7] = 1) {
+                        } elseif ($column[7] != "") {
                             $EvLevType = "Regional";
-                        } elseif ($column[8] = 1) {
+                        } elseif ($column[8] != "") {
                             $EvLevType = "County";
-                        } elseif ($column[9] = 1) {
+                        } elseif ($column[9] != "") {
                             $EvLevType = "Club";
                         }
 
                         //Handle EvLevelType
                         $EvDiscType = "";
-                        if ($column[10] = 1) {
+                        if ($column[10] != "") {
                             $EvDiscType = "Target";
-                        } elseif ($column[11] = 1) {
+                        } elseif ($column[11] != "") {
                             $EvDiscType = "Field";
-                        } elseif ($column[12] = 1) {
+                        } elseif ($column[12] != "") {
                             $EvDiscType = "Clout";
-                        } elseif ($column[13] = 1) {
+                        } elseif ($column[13] != "") {
                             $EvDiscType = "Flight";
-                        } elseif ($column[14] = 1) {
+                        } elseif ($column[14] != "") {
                             $EvDiscType = "Other";
                         }
 
                         //Handle EvOptionType
                         $EvOptType = "";
-                        if ($column[15] = 1) {
+                        if ($column[15] != "") {
                             $EvOptType = "Indoor";
-                        } elseif ($column[16] = 1) {
+                        } elseif ($column[16] != "") {
                             $EvOptType = "H2H";
                         }
 
                         //Handle EvStatusType
                         $EvStatusType = "";
-                        if ($column[17] = 1) {
+                        if ($column[17] != "") {
                             $EvStatusType = "WRS";
-                        } elseif ($column[18] = 1) {
+                        } elseif ($column[18] != "") {
                             $EvStatusType = "UKRS";
-                        } elseif ($column[19] = 1) {
+                        } elseif ($column[19] != "") {
                             $EvStatusType = "Non-Record";
-                        } elseif ($column[20] = 1) {
+                        } elseif ($column[20] != "") {
                             $EvStatusType = "Training";
                         }
 
                         //Handle EvRoleType
                         $EvRoleType = "";
-                        if ($column[21] = 1) {
+                        if ($column[21] != "") {
                             $EvRoleType = "COJ";
-                        } elseif ($column[22] = 1) {
+                        } elseif ($column[22] != "") {
                             $EvRoleType = "DOS";
-                        } elseif ($column[23] = 1) {
+                        } elseif ($column[23] != "") {
                             $EvRoleType = "Judge";
-                        } elseif ($column[24] = 1) {
+                        } elseif ($column[24] != "") {
                             $EvRoleType = "Training";
                         }
-                        $stmt->bindParam(':AGB', "964787");
+                        $AGBNUMBER = "964787";
+                        //convert date to Import Date
+                        $ShootDate=DateTime::createFromFormat('n/j/Y',$column[0]);
+                        $importDate = $ShootDate->format('Y-m-d');
+
+                        $stmt->bindParam(':AGB', $AGBNUMBER);
                         $stmt->bindParam(':EvNameSet', $column[1]);
                         $stmt->bindParam(':EvRoundSet', $column[1]);
-                        $stmt->bindParam(':EvDateSet', date("Y/n/j", strtotime(str_replace('/', '-', $column[0]))));
+                        $stmt->bindParam(':EvDateSet', $importDate);
+
                         $stmt->bindParam(':EvOrgSet', $EvOrgType);
                         $stmt->bindParam(':EvLevelSet', $EvLevType);
                         $stmt->bindParam(':EvDisciplineSet', $EvDiscType);
@@ -109,14 +115,14 @@ if (isset($_POST["btn_upload"])) {
                         $stmt->bindParam(':EvStatusSet', $EvStatusType);
                         $stmt->bindParam(':EvRoleSet', $EvRoleType);
 
-                        $stmt = $db->execute();
+                        $stmt->execute();
                     }
 
                     if (!empty($result)) {
-                        header("Location: ../view/dashboard.php");
+                        header("Location: ./NewDash/UpdatedDash.php");
                     } else {
 
-                        echo "Problem in Importing CSV Data";
+                        header("Location: ./NewDash/UpdatedDash.php");;
                     }
 
                 } }

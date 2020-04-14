@@ -16,10 +16,10 @@ function showProducts(){
         var read_products_html=`
     <!-- when clicked, it will load the create product form -->
     <div id='create-product' class='btn btn-primary pull-right m-b-15px create-product-button'>
-        <span class='glyphicon glyphicon-plus'></span> Create Product
+        <span class='glyphicon glyphicon-plus'></span> Create Shoots
     </div>
-     <div id='upload-product' class='btn btn-sec pull-right m-b-15px upload-product-button'>
-        <span class='glyphicon glyphicon-list'></span> Upload Products
+     <div id='upload-product' class='btn btn-primary pull-right m-b-15px upload-product-button'>
+        <span class='glyphicon glyphicon-list'></span> Upload Shoots
     </div>
 <!-- start table -->
 <table class='table table-bordered table-hover'>
@@ -60,9 +60,9 @@ $.each(data.records, function(key, val) {
             <!-- 'action' buttons -->
             <td>
                 <!-- read product button -->
-                <button class='btn btn-primary m-r-5px read-one-product-button' data-id='` + val.id + `'>
+             <!--   <button class='btn btn-primary m-r-5px read-one-product-button' data-id='` + val.id + `'>
                     <span class='glyphicon glyphicon-eye-open'></span> Read
-                </button>
+                </button> -->
  
                 <!-- edit button -->
                 <button class='btn btn-info m-r-5px update-product-button' data-id='` + val.id + `'>
