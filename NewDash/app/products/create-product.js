@@ -50,7 +50,12 @@ $(document).ready(function(){
         </tr>
           <tr>
             <td>Event Type</td>
-            <td><input type='text' name='EvDiscipline' class='form-control' required /></td>
+         
+            <td><select name='EvDiscipline' class='form-control' required>
+                <option value="Target">Target</option>
+                <option value="Field">Field</option>
+                <option value="Clout">Clout</option>
+                <option value="Flight">Flight</option></select></td>
         </tr>
           <tr>
             <td>Event Options</td>
