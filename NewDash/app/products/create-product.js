@@ -35,7 +35,20 @@ $(document).ready(function(){
         </tr>
         <tr>
             <td>Shoot Round</td>
-            <td><input type='text' name='EvRound' class='form-control' required /></td>
+            <td><select name='EvRound' class='form-control' required >
+                <option value="">...Select</option>
+                <option value="1440/Metrics">1440 and Metrics I-V</option>
+                <option value="2x1440/Metrics">Double 1440 and Metrics I-V</option>
+                <option value="720">70/60/50 Meter round</option>
+                <option value="2x720"> Double 70/60/50 Meter round</option>
+                <option value="York/Hereford/Bristols">York/Hereford/Bristols</option>
+                <option value="Metrics">Metrics I-V</option>
+                <option value="Worcester">Worcester</option>
+                <option value="WA18">WA 18 Meter Round</option>
+                <option value="WA25">WA 25 Meter Round</option>
+                <option value="Portsmouth">Portsmouth</option>
+                <option value="Training">Training</option>
+              </select></td>
         </tr>
         <!-- price field -->
         <tr>
