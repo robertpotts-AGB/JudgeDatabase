@@ -1,4 +1,5 @@
 <?php
+session_start();
 // required headers
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
@@ -22,7 +23,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 // make sure data is not empty
 if (
-    !empty($data->AGBNo) &&
+
     !empty($data->EvName) &&
     !empty($data->EvRound) &&
     !empty($data->EvDate) &&
@@ -35,7 +36,7 @@ if (
 ) {
 
     // set product property values
-    $product->AGBNo = $data->AGBNo;
+    $product->AGBNo = ($_SESSION["username"]);
     $product->EvName = $data->EvName;
     $product->EvRound = $data->EvRound;
     $product->EvDate = $data->EvDate;

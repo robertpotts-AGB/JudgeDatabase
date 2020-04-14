@@ -23,10 +23,7 @@ $(document).ready(function(){
 <form id='create-product-form' action='#' method='post' border='0'>
     <table class='table table-hover table-responsive table-bordered'>
         <!-- name field -->
- <tr>
-            <td>AGBNumber</td>
-            <td><input type='number' minlength="6"  name='AGBNo' class='form-control' required /></td>
-        </tr>
+ 
         <tr>
             <td>Shoot Date</td>
             <td><input type='date' name='EvDate' class='form-control' required /></td>
