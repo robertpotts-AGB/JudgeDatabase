@@ -101,16 +101,19 @@ $(document).ready(function(){
             type : "POST",
             contentType : 'application/json',
             data : form_data,
-            success : function(result) {
+           /* success : function(result) {
                 // product was created, go back to products list
                 showProducts();
             },
             error: function(xhr, resp, text) {
                 // show error to console
                 console.log(xhr, resp, text);
-            }
-        });
+            }*/
 
+
+
+        });
+        showProducts();
         return false;
     });
 
