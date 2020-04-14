@@ -24,6 +24,10 @@ function showProducts(){
       <div id='read-JLO' class='btn btn-primary pull-right m-b-15px readJLO-products-button'>
         <span class='glyphicon glyphicon-list'></span> JLO Shoots
     </div>
+     <div id='personal-export' class='btn btn-primary pull-right m-b-15px personalexport-shootrecords-button'>
+        <span class='glyphicon glyphicon-list'></span> Export My Shoots
+    </div>
+    
 <!-- start table -->
 <table class='table table-bordered table-hover'>
  

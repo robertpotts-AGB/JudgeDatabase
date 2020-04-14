@@ -9,10 +9,11 @@ namespace Phppot;
 //nclude ('../common/head.php');
 	require_once('config.php');
     use \Phppot\Member;
-
 session_start();
     $agbno = $_SESSION['AGBNO'];
 
+// get database connection
+include_once '../config/database.php';
 
 
 
