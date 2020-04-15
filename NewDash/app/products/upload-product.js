@@ -10,9 +10,17 @@ $(document).ready(function(){
         var upload_product_php= `
         
         <p>
-   J07 files can be uploaded to the system, please save the data sheet of the J07 as a CSV file before attempting the upload.
+   J07 files can be uploaded to the system without any modification however please save the data sheet of the J07 as a CSV file before attempting the upload.
    
-   A csv version of the J07 can be downloaded using the template link below, if you prefer to copy the data from the J07 into this sheet. 
+   A csv version of the J07 can be downloaded using the template link below, if you prefer to copy the data from the J07 into this sheet. (this does not have all the error checking functions)
+   
+
+</p>
+<p>
+
+If using the template it is important you only copy the data into the rows below the 'New Data Below here' text (row 9 onwards in excel) and ignore the other items above this line
+
+<a href="/JudgeDatabase/NewDash/app/assets/J07.csv">Download Template</a>
 
 </p>
 
