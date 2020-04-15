@@ -18,7 +18,14 @@ var read_products_html=`
     <span class='glyphicon glyphicon-plus'></span> Create Shoots
 </div>
 <div id='upload-product' class='btn btn-primary pull-right m-b-15px upload-shootrecords-button'>
-    <span class='glyphicon glyphicon-list'></span> Upload Shoots
+    <span class='glyphicon glyphicon-list'></span> Upload J07
+</div>
+
+<div id='JLOstats-product' class='btn btn-danger pull-left m-b-15px JLOstats-products-button'>
+    <span class='glyphicon glyphicon-list'></span> Statistics by Rules
+</div>
+<div id='JLOstats-product' class='btn btn-danger pull-left m-b-15px JLOstats-level-products-button'>
+    <span class='glyphicon glyphicon-list'></span> Statistics by Level
 </div>
 
   <div id='read-products' class='btn btn-primary pull-right m-b-15px read-products-button'>

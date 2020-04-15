@@ -218,4 +218,73 @@ class Product
         return $stmt;
     }
 
+    function OrganisationCount()
+    {
+        $Region = ($_SESSION["region"]);
+        // select all query
+        $query = "SELECT COUNT(shootrec.EvOrg) AS OrgTotal,EvOrg,region
+            FROM shootrec, registered_users
+             WHERE region = '$Region'
+            GROUP BY EvOrg";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
+    function LevelCount()
+    {
+        $Region = ($_SESSION["region"]);
+        // select all query
+        $query = "SELECT COUNT(shootrec.EvLevel) AS LevelTotal, EvLevel,region
+            FROM shootrec, registered_users
+            WHERE region ='$Region'
+		Group By EvLevel, region
+		ORDER BY LevelTotal";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
+    function RoleCount()
+    {
+        $Region = ($_SESSION["region"]);
+        // select all query
+        $query = "SELECT COUNT(shootrec.EvRole) AS RoleTotal, EvRole,region
+            FROM shootrec, registered_users
+            WHERE region ='$Region'
+		Group By EvRole, region";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
+    function TypeCount()
+    {
+        $Region = ($_SESSION["region"]);
+        // select all query
+        $query = "SELECT COUNT(shootrec.EvDiscipline) AS TypeTotal, EvDiscipline,region
+            FROM shootrec, registered_users
+            WHERE region ='$Region'
+		Group By EvDiscipline, region";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
 }
