@@ -59,6 +59,6 @@ include ('../common/head.php');
 <script src="app/products/upload-product.js"></script>
 <script src="app/products/read-jlo.js"></script>
 <script src="app/products/personal-export.js"></script>
-<script src="app/products/JLOstats.js"></script>
+<script src="app/products/JLOStats.js"></script>
 </body>
 </html>
