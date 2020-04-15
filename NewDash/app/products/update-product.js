@@ -84,6 +84,7 @@ $(document).ready(function(){
                 <option value="WRS">World Record Status / Arrowhead</option>
                 <option value="UKRS">UK Record Status / Tassel Award</option>
                 <option value="Non-Record">Non-Record Status</option>
+                 <option value="Training">Training</option>
               </select></td>
         </tr>
         <tr>
