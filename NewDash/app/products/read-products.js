@@ -27,7 +27,7 @@ function showProducts(){
    <span class='glyphicon glyphicon-list'></span> JLO Shoots
    </div>
      <div id='personal-export' class='btn btn-primary pull-right m-b-15px personalexport-shootrecords-button'>
-        <span class='glyphicon glyphicon-list'></span> Export My Shoots
+        <span class='glyphicon glyphicon-download'></span> Export My Shoots
     </div>
     
 <!-- start table -->
