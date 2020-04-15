@@ -23,7 +23,7 @@ $Name=($_SESSION["displayName"])
     <table class='table table-bordered table-hover'>
         <tr>
             <td>
-                <img src="../common/Logo.png" height="90">
+
             </td>
             <td>
                 <? if ($displayName !='') {

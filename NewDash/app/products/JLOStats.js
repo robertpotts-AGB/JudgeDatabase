@@ -17,15 +17,7 @@ function showJLOStats() {
 // html for listing products
         var read_products_html = `
 <!-- when clicked, it will load the create shootrecords form -->
- <div id='read-JLO' class='btn btn-danger pull-left m-b-15px readJLO-products-button'>
-   <span class='glyphicon glyphicon-list'></span> JLO Shoots
-   </div>
- <div id='JLOstats-product' class='btn btn-danger pull-left m-b-15px JLOstats-level-products-button'>
-    <span class='glyphicon glyphicon-list'></span> Statistics by Level
-</div>
-  <div id='read-products' class='btn btn-primary pull-right m-b-15px read-products-button'>
-        <span class='glyphicon glyphicon-list'></span> My Shoots
-    </div>
+ 
 <!-- start table -->
 <table class='table table-bordered table-hover'>
 
@@ -64,12 +56,7 @@ function showJLOStats() {
 // html for listing products
         var read_level_html = `
 <!-- when clicked, it will load the create shootrecords form -->
-<div id='JLOstats-product' class='btn btn-danger pull-left m-b-15px JLOstats-products-button'>
-    <span class='glyphicon glyphicon-list'></span> Statistics by Rules
-</div>
- <div id='read-JLO' class='btn btn-danger pull-left m-b-15px readJLO-products-button'>
-   <span class='glyphicon glyphicon-list'></span> JLO Shoots
-   </div>
+
 <!-- start table -->
 <table class='table table-bordered table-hover'>
 
