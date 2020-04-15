@@ -23,11 +23,18 @@ try
                     'password'     =>     $_POST["password"]
                 )
             );
+           while($row = $statement->fetch(PDO::FETCH_NUM)){
+           $_SESSION["region"]= $row[8];
+           $_SESSION["isJLO"] = $row[9];
+           }
+
+
             $count = $statement->rowCount();
             if($count > 0)
             {
                 $_SESSION["username"] = $_POST["username"];
-                $_SESSION["region"] = "SCAS";
+
+
                 header("location:UpdatedDash.php");
             }
             else

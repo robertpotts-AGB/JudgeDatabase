@@ -14,7 +14,7 @@ $.getJSON("/JudgeDatabase/api/shootrecords/readregion.php", function(data){
 // html for listing products
 var read_products_html=`
 <!-- when clicked, it will load the create shootrecords form -->
-<div id='create-product' class='btn btn-primary pull-right m-b-15px create-shootrecords-button'>
+<div id='create-product' class='btn btn-success pull-right m-b-15px create-shootrecords-button'>
     <span class='glyphicon glyphicon-plus'></span> Create Shoots
 </div>
 <div id='upload-product' class='btn btn-primary pull-right m-b-15px upload-shootrecords-button'>

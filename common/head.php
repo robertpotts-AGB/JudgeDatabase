@@ -1,10 +1,8 @@
 <?
 session_start();
 //include 'config.php';
-use \Phppot\Member;
-require_once(dirname(dirname(__FILE__)) . '/class/Member.php');
 $displayName=($_SESSION["username"]);
-
+$region =($_SESSION["region"]);
 ?>
 <html>
 
@@ -17,6 +15,7 @@ $displayName=($_SESSION["username"]);
             <td id="name">
                 <? if ($displayName !='') {
                     echo $displayName;
+                    echo $region;
                 }
                 ?>
             </td>

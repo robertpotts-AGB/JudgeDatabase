@@ -10,20 +10,22 @@ $(document).ready(function(){
 
 // function to show list of products
 function showProducts(){
+
 // get list of products from the API
     $.getJSON("/JudgeDatabase/api/shootrecords/read.php", function(data){
         // html for listing products
+
         var read_products_html=`
     <!-- when clicked, it will load the create shootrecords form -->
-    <div id='create-product' class='btn btn-primary pull-right m-b-15px create-shootrecords-button'>
-        <span class='glyphicon glyphicon-plus'></span> Create Shoots
+    <div id='create-product' class='btn btn-success pull-right m-b-15px create-shootrecords-button'>
+        <span class='glyphicon glyphicon-plus'></span> Add New Shoot
     </div>
      <div id='upload-product' class='btn btn-primary pull-right m-b-15px upload-shootrecords-button'>
-        <span class='glyphicon glyphicon-list'></span> Upload Shoots
+        <span class='glyphicon glyphicon-list'></span> Upload J07
     </div>
-      <div id='read-JLO' class='btn btn-primary pull-right m-b-15px readJLO-products-button'>
-        <span class='glyphicon glyphicon-list'></span> JLO Shoots
-    </div>
+    <div id='read-JLO' class='btn btn-danger pull-left m-b-15px readJLO-products-button'>
+   <span class='glyphicon glyphicon-list'></span> JLO Shoots
+   </div>
      <div id='personal-export' class='btn btn-primary pull-right m-b-15px personalexport-shootrecords-button'>
         <span class='glyphicon glyphicon-list'></span> Export My Shoots
     </div>

@@ -42,7 +42,14 @@ $(document).ready(function(){
                 <option value="720">70/60/50 Meter round</option>
                 <option value="2x720"> Double 70/60/50 Meter round</option>
                 <option value="York/Hereford/Bristols">York/Hereford/Bristols</option>
+                 <option value="Nationals">Nationals</option>
                 <option value="Metrics">Metrics I-V</option>
+                <option value="American">American</option>
+                <option value="Albion/Windsors">St George/Albion/Windsors</option>
+                <option value="Stafford">Stafford</option>
+                <option value="Vegas">Vegas</option>
+                <option value="Short Metrics">Short Metrics</option>
+                <option value="Long Metrics">Long Metrics</option>
                 <option value="Worcester">Worcester</option>
                 <option value="WA18">WA 18 Meter Round</option>
                 <option value="WA25">WA 25 Meter Round</option>
