@@ -7,9 +7,38 @@ $(document).ready(function(){
             <div class='page-header'>
                 <h1 id='page-title' class="well" >My Shoots</h1>
             </div>
- 
-            <!-- this is where the contents will be shown. -->
             <div id='page-content'></div>
+            <!-- this is where the contents will be shown. -->
+            <table>
+            <tr>
+            <td>
+             <div class="panel panel-default" id='page-content1'></div>
+            </td>
+            <td width="25%">
+            
+</td>
+            <td>
+              <div  class="panel panel-default" id='page-content3'></div>
+            </td>
+</tr>
+ <tr>
+            <td>
+             <div class="panel panel-default" id='page-content2'></div>
+            </td>
+            <td width="25%"></td>
+            <td>
+              <div class="panel panel-default" id='page-content4'></div>
+            </td>
+             <td width="25%"></td>
+             <td>
+              <div class="panel panel-default" id='page-content5'></div>
+            </td>
+</tr>
+</table>
+           
+          
+       
+            
  
         </div>`;
 

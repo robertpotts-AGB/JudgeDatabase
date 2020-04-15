@@ -65,8 +65,12 @@ if(!isset($_SESSION['username'])){
                 <ul class="dropdown-menu">
                     <li><a href="#"><span class=readJLO-products-button>All Judges records</span></a></li>
                     <li><a href="#"><span class=upload-shootrecords-butto>Export All Records</span></a></li>
-                    <li><a href="#"><span class=JLOstats-products-button>Statistics by Event Organisation</span></a></li>
-                    <li><a href="#"><span class=JLOstats-level-products-button>Statistics by Event Level</span></a></li>
+                    <li><a href="#"><span class=JLOstats-products-button>Statistics for the Region</span></a></li>
+                  <!--  <li><a href="#"><span class=JLOstats-level-products-button>Statistics by Event Level</span></a></li>
+                     <li><a href="#"><span class=JLOstats-role-products-button>Statistics by Role</span></a></li>
+                      <li><a href="#"><span class=JLOstats-type-products-button>Statistics by Type</span></a></li>-->
+      
+   
                 </ul>
             </li>';
             } ?>

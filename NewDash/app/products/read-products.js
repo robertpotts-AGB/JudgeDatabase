@@ -5,6 +5,11 @@ $(document).ready(function(){
 // when a 'read products' button was clicked
     $(document).on('click', '.read-products-button', function(){
         showProducts();
+        $("#page-content1").html("");
+        $("#page-content2").html("");
+        $("#page-content3").html("");
+        $("#page-content4").html("");
+        $("#page-content5").html("");
     });
 });
 

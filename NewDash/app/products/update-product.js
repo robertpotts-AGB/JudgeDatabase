@@ -2,6 +2,11 @@ $(document).ready(function(){
 
     // show html form when 'update shootrecords' button was clicked
     $(document).on('click', '.update-shootrecords-button', function(){
+        $("#page-content1").html("");
+        $("#page-content2").html("");
+        $("#page-content3").html("");
+        $("#page-content4").html("");
+        $("#page-content5").html("");
         // get shootrecords id
         var id = $(this).attr('data-id');
         // read one record based on given shootrecords id

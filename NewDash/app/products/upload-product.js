@@ -2,7 +2,11 @@ $(document).ready(function(){
 
     // show html form when 'upload shootrecords' button was clicked
     $(document).on('click', '.upload-shootrecords-button', function(){
-
+        $("#page-content1").html("");
+        $("#page-content2").html("");
+        $("#page-content3").html("");
+        $("#page-content4").html("");
+        $("#page-content5").html("");
         var upload_product_php= `
         
         <p>

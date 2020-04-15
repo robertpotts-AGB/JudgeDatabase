@@ -287,4 +287,22 @@ class Product
 
         return $stmt;
     }
+    function StatusCount()
+    {
+        $Region = ($_SESSION["region"]);
+        // select all query
+        $query = "SELECT COUNT(shootrec.EvStatus) AS StatusTotal, EvStatus,region
+            FROM shootrec, registered_users
+            WHERE region ='$Region'
+		Group By EvStatus, region";
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
+
 }
