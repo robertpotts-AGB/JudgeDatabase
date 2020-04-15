@@ -29,6 +29,15 @@ if(!isset($_SESSION['username'])){
 
 </head>
 <body>
+<script src="app/products/read-products.js"></script>
+<script src="app/products/create-product.js"></script>
+<!--<script src="app/products/read-one-product.js"></script>-->
+<script src="app/products/update-product.js"></script>
+<script src="app/products/delete-product.js"></script>
+<script src="app/products/upload-product.js"></script>
+<script src="app/products/read-jlo.js"></script>
+<script src="app/products/personal-export.js"></script>
+<script src="app/products/JLOStats.js"></script>
 <nav class="navbar navbar-inverse">
 
     <a class="navbar-brand" href="#"> Judge Records System</a>
@@ -61,9 +70,13 @@ if(!isset($_SESSION['username'])){
                 </ul>
             </li>';
             } ?>
-            <a href="./logout.php" class="logout-button">Logout</a>
+            <a class="navbar-brand pull-right">You are logged in as <?php echo $_SESSION["displayName"]?> </a>
         </ul>
-          <a class="dropdown pull-right">You are logged in as <?php echo $_SESSION["displayName"]?> </a>
+
+
+        <button href="./logout.php" class="btn btn-danger navbar-btn logout-button m-b-15px ">Logout</button>
+
+
         <button class="btn btn-success navbar-btn create-shootrecords-button pull-right m-b-15px ">Add New Shoot</button>
     </div>
 </nav>
