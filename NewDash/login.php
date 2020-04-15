@@ -26,6 +26,7 @@ try
            while($row = $statement->fetch(PDO::FETCH_NUM)){
            $_SESSION["region"]= $row[8];
            $_SESSION["isJLO"] = $row[9];
+           $_SESSION["displayName"]  = $row[2];
            }
 
 

@@ -30,8 +30,10 @@ include ('../common/head.php');
     <link href="app/assets/css/style.css" rel="stylesheet" />
 
 
+
 </head>
 <body>
+
 
 <!-- our app will be injected here -->
 <div id="app"></div>

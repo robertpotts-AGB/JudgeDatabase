@@ -39,27 +39,79 @@ $(document).ready(function(){
         </tr>
         <tr>
             <td>Round</td>
-            <td><input value=\"` + round + `\" type='text' name='EvRound' class='form-control' required /></td>
+                 <td><select value=\"`+ round +`\" name='EvRound' class='form-control' required >
+                <option value=\"`+round+`\">`+ round +`</option>
+                <option value="OnTarget">Ontarget</option>
+                <option value="1440/Metrics">1440 and Metrics I-V</option>
+                <option value="2x1440/Metrics">Double 1440 and Metrics I-V</option>
+                <option value="720">70/60/50 Meter round</option>
+                <option value="2x720"> Double 70/60/50 Meter round</option>
+                <option value="York/Hereford/Bristols">York/Hereford/Bristols</option>
+                 <option value="Nationals">Nationals</option>
+                <option value="Metrics">Metrics I-V</option>
+                <option value="American">American</option>
+                <option value="Albion/Windsors">St George/Albion/Windsors</option>
+                <option value="Stafford">Stafford</option>
+                <option value="Vegas">Vegas</option>
+                <option value="Short Metrics">Short Metrics</option>
+                <option value="Long Metrics">Long Metrics</option>
+                <option value="Worcester">Worcester</option>
+                <option value="WA18">WA 18 Meter Round</option>
+                <option value="WA25">WA 25 Meter Round</option>
+                <option value="Portsmouth">Portsmouth</option>
+                <option value="Training">Training</option>
+              </select></td>
         </tr>
         <tr>
             <td>Type</td>
-            <td><input value=\"` + disc + `\" type='text' name='EvDiscipline' class='form-control' required /></td>
+            <td><select name='EvDiscipline' class='form-control' required>
+                <option value=\"` + disc + `\">` + disc + `</option>
+                <option value="Target">Target</option>
+                <option value="Field">Field</option>
+                <option value="Clout">Clout</option>
+                <option value="Flight">Flight</option></select></td>
         </tr>
         <tr>
             <td>Status</td>
-            <td><input value=\"` + status + `\" type='text' name='EvStatus' class='form-control' required /></td>
+          
+            <td><select name='EvStatus' class='form-control' required>
+                <option value=\"` + status + `\">` + status + `</option>
+                <option value="WRS">World Record Status / Arrowhead</option>
+                <option value="UKRS">UK Record Status / Tassel Award</option>
+                <option value="Non-Record">Non-Record Status</option>
+              </select></td>
         </tr>
         <tr>
             <td>Role</td>
-            <td><input value=\"` + role + `\" type='text' name='EvRole' class='form-control' required /></td>
+            <td><select name='EvRole' class='form-control' required>
+                <option value=\"` + role + `\">` + role + `</option>
+                <option value="COJ">Chair of Judges</option>
+                <option value="DOS">Director of Shooting</option>
+                <option value="Judge">Judge</option>
+                <option value="Trainer">Trainer</option>
+                <option value="Attendee">Attendee</option>
+              </select></td>
         </tr>
         <tr>
             <td>Rules</td>
-            <td><input value=\"` + org + `\" type='text' name='EvOrg' class='form-control' required /></td>
+            <td><select name='EvOrg' class='form-control' required>
+                <option value=\"`+ org +`\">`+ org +`</option>
+                <option value="AGB">AGB</option>
+                <option value="WA">WA</option>
+                <option value="Training">Training</option>
+              </select></td>
         </tr>
         <tr>
             <td>Level</td>
-            <td><input value=\"` + level + `\" type='text' name='EvLevel' class='form-control' required /></td>
+         
+            <td><select name='EvLevel' class='form-control' required>
+                <option value=\"` + level + `\">` + level + `</option>
+                <option value="International">International</option>
+                <option value="National">National</option>
+                <option value="Regional">Regional</option>
+                <option value="County">County</option>
+                <option value="Club">Club</option>
+              </select></td>
         </tr>
         <tr>
             <td>Optional</td>
