@@ -134,7 +134,7 @@ $(document).ready(function(){
             $("#page-content").html(create_product_html);
 
 // chage page title
-            changePageTitle("Create Product");
+            changePageTitle("Create Shoot");
         });
 
     });

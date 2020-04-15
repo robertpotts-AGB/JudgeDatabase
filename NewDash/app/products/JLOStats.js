@@ -46,7 +46,7 @@ function showJLOStats() {
 // inject to 'page-content' of our app
         $("#page-content").html(read_products_html);
 // chage page title
-        changePageTitle("JLO Stats");
+        changePageTitle("Statistics by Organisation");
 
     });
 }
@@ -84,6 +84,8 @@ function showJLOStats() {
         read_level_html += `</table>`;
 // inject to 'page-content' of our app
         $("#page-content").html(read_level_html);
+// chage page title
+        changePageTitle("Statistics by Level of event");
 
 
     });

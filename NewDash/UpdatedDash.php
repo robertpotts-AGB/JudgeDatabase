@@ -61,9 +61,9 @@ if(!isset($_SESSION['username'])){
                 </ul>
             </li>';
             } ?>
-
+            <a href="./logout.php" class="logout-button">Logout</a>
         </ul>
-          <a class="dropdown">You are logged in as <?php echo $_SESSION["displayName"]?> </a>
+          <a class="dropdown pull-right">You are logged in as <?php echo $_SESSION["displayName"]?> </a>
         <button class="btn btn-success navbar-btn create-shootrecords-button pull-right m-b-15px ">Add New Shoot</button>
     </div>
 </nav>

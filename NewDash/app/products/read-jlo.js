@@ -61,7 +61,7 @@ var read_products_html=`
 // inject to 'page-content' of our app
 $("#page-content").html(read_products_html);
 // chage page title
-changePageTitle("My Shoots");
+changePageTitle("Regional Judges entries");
 
 });
 }
