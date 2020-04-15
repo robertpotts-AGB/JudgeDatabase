@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../api/config/database.php';
-include '../common/head.php';
+
 
 try
 {
