@@ -78,7 +78,7 @@ if(!isset($_SESSION['username'])){
         </ul>
 
 
-        <button href="./logout.php" class="btn btn-danger navbar-btn logout-button m-b-15px ">Logout</button>
+        <button onclick="window.location.href = './logout.php';" class="btn btn-danger navbar-btn logout-button m-b-15px ">Logout</button>
 
 
         <button class="btn btn-success navbar-btn create-shootrecords-button pull-right m-b-15px ">Add New Shoot</button>
