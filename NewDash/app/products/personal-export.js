@@ -9,4 +9,13 @@ $(document).ready(function() {
                 document.location.href = '../api/shootrecords/CSVPersonalExport.php';
                 $('#wait-animation').hide();
             });
+
+    $(document).on('click', '.JLOExport-shootrecords-button', function () {
+
+        $('#wait-animation').show();
+        //var table="thcu_cabtemphpc";
+        alert("Export in progress");
+        document.location.href = '../api/shootrecords/CSVPersonalExport.php';
+        $('#wait-animation').hide();
+    });
 });
