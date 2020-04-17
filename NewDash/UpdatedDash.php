@@ -54,7 +54,7 @@ if(!isset($_SESSION['username'])){
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="#"><span class='create-shootrecords-button'>Add a shoot</span></a></li>
-                    <li><a href="#"><span class='create-products-button'>My Current Shoots</span></a></li>
+                    <li><a href="#"><span class='read-products-button'>My Current Shoots</span></a></li>
                     <li><a href="#"><span class='upload-shootrecords-button'>Upload Shoots from J07</span></a></li>
                     <li><a href="#"><span class='personalexport-shootrecords-button'>Export my shoots</span></a></li>
                 </ul>
