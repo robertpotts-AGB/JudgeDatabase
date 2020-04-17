@@ -15,7 +15,7 @@ $(document).ready(function() {
         $('#wait-animation').show();
         //var table="thcu_cabtemphpc";
         alert("Export in progress");
-        document.location.href = '../api/shootrecords/CSVPersonalExport.php';
+        document.location.href = '../api/shootrecords/CSVRegionalExporter.php';
         $('#wait-animation').hide();
     });
 });
