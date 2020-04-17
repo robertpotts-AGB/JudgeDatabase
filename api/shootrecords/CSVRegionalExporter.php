@@ -8,7 +8,7 @@ $database = new Database();
 $db = $database->getConnection();
 
 
-$result = "SELECT * FROM shootrecregistered_users
+$result = "SELECT a.*, display_name FROM shootrec a, registered_users
             WHERE region ='$Region' ";
 //$shrecs = $db->query($result);
 
