@@ -98,9 +98,9 @@ $(document).ready(function(){
         </tr>
           <tr>
             <td>Optional Event Information</td>
-            <td><select name='EvOptional' class='form-control' required ></td>
+            <td><select name='EvOptional' class='form-control' required >
              <option value="">...Select</option>
-             <option value="H2H">Head to Head event</option></select>
+             <option value="H2H">Head to Head event</option></select></td>
                
                
         </tr>
