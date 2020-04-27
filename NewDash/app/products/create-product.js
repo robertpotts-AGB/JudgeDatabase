@@ -85,18 +85,24 @@ $(document).ready(function(){
             <td>Event Type</td>
             <td><select name='EvDiscipline' class='form-control' required>
                 <option value="">...Select</option>
-                <option value="Target">Target</option>
+                <option value="Target">Outdoor Target</option>
+                <option value="Target">Indoor Target</option>
                 <option value="Field">Field</option>
+                <option value="3D">3D</option>
                 <option value="Clout">Clout</option>
                 <option value="Flight">Flight</option>
-                <option value="Seminar">Clout</option>
-                <option value="Conference">Clout</option>
-                <option value="Other CPD">Clout</option>
+                <option value="Seminar">Seminar</option>
+                <option value="Conference">Conference</option>
+                <option value="Other CPD">Other CPD</option>
                 </select></td>
         </tr>
           <tr>
-            <td>Event Options</td>
+            <td>Optional Event Information</td>
             <td><input type='text' name='EvOptional' class='form-control' required /></td>
+             <option value="">...Select</option>
+                <option value="H2H">Head to Head event</option>
+               
+               
         </tr>
           <tr>
             <td>Event Status</td>
@@ -110,11 +116,11 @@ $(document).ready(function(){
         </tr>
           <tr>
             <td>Event Role</td>
-            <td><select name='EvRole' class='form-control' multiple required>
+            <td><select name='EvRole' class='form-control' required>
                 <option value="">...Select</option>
                 <option value="COJ">Chair of Judges</option>
                 <option value="DOS">Director of Shooting</option>
-                <option value="Judge">Judge</option>
+                <option value="Judge">Judge / Field Captain</option>
                 <option value="Trainer">Trainer</option>
                 <option value="Attendee">Attendee</option>
               </select></td>
