@@ -110,7 +110,7 @@ $(document).ready(function(){
         </tr>
           <tr>
             <td>Event Role</td>
-            <td><select name='EvRole' class='custom-select' multiple required>
+            <td><select name='EvRole' class='form-control' multiple required>
                 <option value="">...Select</option>
                 <option value="COJ">Chair of Judges</option>
                 <option value="DOS">Director of Shooting</option>
