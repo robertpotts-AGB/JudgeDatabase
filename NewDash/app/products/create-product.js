@@ -99,7 +99,7 @@ $(document).ready(function(){
             <td>Optional Event Information</td>
             <td><select name='EvOptional' class='form-control' required >
              <option value="">...Select</option>
-             <option value="H2H">Head to Head event</option></select></td>
+             <option value="H2H">Head to Head event</option>
              <option value="Indoor">Indoor</option></select></td>
                
                
