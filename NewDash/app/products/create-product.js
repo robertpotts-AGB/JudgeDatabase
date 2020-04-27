@@ -88,7 +88,11 @@ $(document).ready(function(){
                 <option value="Target">Target</option>
                 <option value="Field">Field</option>
                 <option value="Clout">Clout</option>
-                <option value="Flight">Flight</option></select></td>
+                <option value="Flight">Flight</option>
+                <option value="Seminar">Clout</option>
+                <option value="Conference">Clout</option>
+                <option value="Other CPD">Clout</option>
+                </select></td>
         </tr>
           <tr>
             <td>Event Options</td>
@@ -106,7 +110,7 @@ $(document).ready(function(){
         </tr>
           <tr>
             <td>Event Role</td>
-            <td><select name='EvRole' class='form-control' required>
+            <td><select name='EvRole' class='custom-select' multiple required>
                 <option value="">...Select</option>
                 <option value="COJ">Chair of Judges</option>
                 <option value="DOS">Director of Shooting</option>
