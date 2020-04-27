@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
     // show list of shootrecords on first load
-    showProducts();
+
 // when a 'read products' button was clicked
     $(document).on('click', '.J08-view-button', function(){
-        showProducts();
+        J08View();
         $("#page-content1").html("");
         $("#page-content2").html("");
         $("#page-content3").html("");
@@ -14,7 +14,7 @@ $(document).ready(function(){
 });
 
 // function to show list of products
-function showProducts(){
+function J08View(){
 
 // get list of products from the API
     $.getJSON("/JudgeDatabase/api/shootrecords/J08view.php", function(data){

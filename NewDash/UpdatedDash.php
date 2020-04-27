@@ -113,5 +113,6 @@ if(!isset($_SESSION['username'])){
 <script src="app/products/read-jlo.js"></script>
 <script src="app/products/personal-export.js"></script>
 <script src="app/products/JLOStats.js"></script>
+<script src="app/products/J08View.js"></script>
 </body>
 </html>
