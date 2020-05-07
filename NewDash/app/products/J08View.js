@@ -30,12 +30,25 @@ function J08View(){
  
     <!-- creating our table heading -->
     <tr>
-        <th class='w-5-pct'>Date</th>
-        <th class='w-5-pct'>Event Name</th>
-        <th class='w-5-pct'>Event Round</th>
-        <th class='w-3-pct'>Rules</th>
-        <th class='w-5-pct'>Event Level</th>
-        <th class='w-5-pct'>Event Level</th>
+        <th class='w-5-pct'>AGB ID</th>
+        <th class='w-5-pct'>Name</th>
+        <th class='w-5-pct'>Total Days</th>
+       
+            <th class='w-3-pct'>WA</th>
+            <th class='w-5-pct'>AGB</th>
+            <th class='w-5-pct'>Training</th>
+            <th class='w-5-pct'>International</th>
+            <th class='w-5-pct'>National</th>
+            <th class='w-5-pct'>Regional</th>
+            <th class='w-5-pct'>County</th>
+            <th class='w-5-pct'>Club</th>
+            <th class='w-5-pct'>Target</th>
+            <th class='w-5-pct'>Field</th>
+            <th class='w-5-pct'>Clout</th>
+            <th class='w-5-pct'>Flight</th>
+                      
+            
+    
   
         <th class='w-10-pct text-align-center'>Action</th>
     </tr>`;
@@ -52,7 +65,18 @@ $.each(data.records, function(key, val) {
             <td>` + val.WA + `</td>
             <td>` + val.AGB + `</td>
             <td>` + val.Training + `</td>
-         
+            <td>` + val.International + `</td>
+            <td>` + val.National + `</td>
+            <td>` + val.Regional + `</td>
+            <td>` + val.County + `</td>
+            <td>` + val.Club + `</td>
+            <td>` + val.Target + `</td>
+            <td>` + val.Field + `</td>
+            <td>` + val.Clout + `</td>
+            <td>` + val.Flight + `</td>
+      
+            
+      
                   
                   
  
@@ -67,12 +91,8 @@ $.each(data.records, function(key, val) {
                 <button class='btn btn-info m-r-5px update-shootrecords-button' data-id='` + val.ID + `'>
                     <span class='glyphicon glyphicon-edit'></span> Edit
                 </button>
- 
-                <!-- delete button -->
-                <button class='btn btn-danger delete-shootrecords-button' data-id='` + val.ID + `'>
-                    <span class='glyphicon glyphicon-remove'></span> Delete
-                </button>
-            </td>
+
+              </td>
  
         </tr>`;
 }); 

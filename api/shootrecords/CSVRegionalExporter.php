@@ -9,7 +9,7 @@ $db = $database->getConnection();
 
 
 $result = "SELECT a.*, display_name FROM shootrec a, registered_users
-            WHERE region ='$Region' ";
+            WHERE AGBNo = agb_no AND region ='$Region' ";
 //$shrecs = $db->query($result);
 
 $stmt = $db->prepare($result);

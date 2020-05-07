@@ -42,6 +42,17 @@ if ($num > 0) {
             "WA" => $WA,
             "AGB" => $AGB,
             "Training" => $Training,
+            "International" => $International,
+            "National" => $National,
+            "Regional" => $Regional,
+            "County" => $County,
+            "Club" => $Club,
+            "Target" => $Target,
+            "Field" => $Field,
+            "Clout" => $Clout,
+            "Flight" => $Flight,
+           
+            
          
 
         );

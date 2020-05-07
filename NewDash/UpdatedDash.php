@@ -29,16 +29,16 @@ if(!isset($_SESSION['username'])){
 
 </head>
 <body>
-<script src="app/products/read-products.js"></script>
+<!--<script src="app/products/read-products.js"></script>
 <script src="app/products/create-product.js"></script>
-<!--<script src="app/products/read-one-product.js"></script>-->
+<script src="app/products/read-one-product.js"></script>
 <script src="app/products/update-product.js"></script>
 <script src="app/products/delete-product.js"></script>
 <script src="app/products/upload-product.js"></script>
 <script src="app/products/read-jlo.js"></script>
 <script src="app/products/personal-export.js"></script>
 <script src="app/products/JLOStats.js"></script>
-<script src="app/products/J08View.js"></script>
+<script src="app/products/J08View.js"></script>-->
 <nav class="navbar navbar-inverse">
 
     <a class="navbar-brand" href="#"> Judge Records System</a>
@@ -60,7 +60,7 @@ if(!isset($_SESSION['username'])){
                     <li><a href="#"><span class='personalexport-shootrecords-button'>Export my shoots</span></a></li>
                 </ul>
             </li>
-            <?if ($_SESSION["isJLO"] == 1){
+            <?php if ($_SESSION["isJLO"] == 1){
                 echo' <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">JLO Overview
                     <span class="caret"></span></a>
