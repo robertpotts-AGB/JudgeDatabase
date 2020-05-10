@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     // show list of shootrecords on first load
-    showProducts();
+   // showProducts();
 // when a 'read products' button was clicked
     $(document).on('click', '.read-products-button', function(){
         showProducts();

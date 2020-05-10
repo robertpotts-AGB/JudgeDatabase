@@ -58,6 +58,7 @@ if(!isset($_SESSION['username'])){
                     <li><a href="#"><span class='read-products-button'>My Current Shoots</span></a></li>
                     <li><a href="#"><span class='upload-shootrecords-button'>Upload Shoots from J07</span></a></li>
                     <li><a href="#"><span class='personalexport-shootrecords-button'>Export my shoots</span></a></li>
+                    <li><a href="#"><span class='read-level-button'>Current Level statistics</span></a></li>
                 </ul>
             </li>
             <?php if ($_SESSION["isJLO"] == 1){
@@ -114,5 +115,6 @@ if(!isset($_SESSION['username'])){
 <script src="app/products/personal-export.js"></script>
 <script src="app/products/JLOStats.js"></script>
 <script src="app/products/J08View.js"></script>
+<script src="app/products/Read-Level.js"></script>
 </body>
 </html>

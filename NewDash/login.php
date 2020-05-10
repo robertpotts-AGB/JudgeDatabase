@@ -27,6 +27,9 @@ try
            $_SESSION["region"]= $row[8];
            $_SESSION["isJLO"] = $row[9];
            $_SESSION["displayName"]  = $row[2];
+           $_SESSION["CurrLevel"] = $row[6];
+           $_SESSION["NextLevel"] = $row[11];
+
            }
 
 
