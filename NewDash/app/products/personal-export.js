@@ -18,4 +18,12 @@ $(document).ready(function() {
         document.location.href = '../api/shootrecords/CSVRegionalExporter.php';
         $('#wait-animation').hide();
     });
+    $(document).on('click', '.J08-download-button', function () {
+
+        $('#wait-animation').show();
+        //var table="thcu_cabtemphpc";
+        alert("Export in progress");
+        document.location.href = '../api/shootrecords/CSVRegionalJ08.php';
+        $('#wait-animation').hide();
+    });
 });

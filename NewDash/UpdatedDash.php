@@ -70,6 +70,7 @@ if(!isset($_SESSION['username'])){
                     <li><a href="#"><span class=JLOExport-shootrecords-button>Export All Records</span></a></li>
                     <li><a href="#"><span class=JLOstats-products-button>Statistics for the Region</span></a></li>
                     <li><a href="#"><span class=J08-view-button>Regional J08</span></a></li>
+                    <li><a href="#"><span class=J08-download-button>Regional J08 Download</span></a></li>
                   <!--  <li><a href="#"><span class=JLOstats-level-products-button>Statistics by Event Level</span></a></li>
                      <li><a href="#"><span class=JLOstats-role-products-button>Statistics by Role</span></a></li>
                       <li><a href="#"><span class=JLOstats-type-products-button>Statistics by Type</span></a></li>-->
