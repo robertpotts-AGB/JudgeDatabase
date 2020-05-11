@@ -105,7 +105,7 @@ if (isset($_POST["btn_upload"])) {
 
                         $stmt->bindParam(':AGB', $AGBNUMBER);
                         $stmt->bindParam(':EvNameSet', $column[1]);
-                        $stmt->bindParam(':EvRoundSet', $column[1]);
+                        $stmt->bindParam(':EvRoundSet', $column[25]);
                         $stmt->bindParam(':EvDateSet', $importDate);
 
                         $stmt->bindParam(':EvOrgSet', $EvOrgType);
