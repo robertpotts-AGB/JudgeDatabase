@@ -29,6 +29,7 @@ try
            $_SESSION["displayName"]  = $row[2];
            $_SESSION["CurrLevel"] = $row[6];
            $_SESSION["NextLevel"] = $row[11];
+           $_SESSION["agbID"] = $row[5];
 
            }
 
