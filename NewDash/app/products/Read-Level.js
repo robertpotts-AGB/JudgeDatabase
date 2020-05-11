@@ -51,7 +51,7 @@ $.each(data.records, function(key, val) {
             
             </tr>
             <tr>
-            <td> Minimum Days </td>
+            <td> Minimum Days at current level required </td>
             <td>` + val.LvMinDays + `</td>
             <td>` + val.TotalDays + `</td>
             </tr>
