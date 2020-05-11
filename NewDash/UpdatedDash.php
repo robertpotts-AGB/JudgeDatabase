@@ -78,7 +78,7 @@ if(!isset($_SESSION['username'])){
                 </ul>
             </li>';
             } ?>
-            <a class="navbar-brand pull-right">You are logged in as <?php echo $_SESSION["displayName"]?> </a>
+            <a class="navbar-brand pull-right">You are logged in as <?php echo $_SESSION["agbID"]?> </a>
         </ul>
 
 
