@@ -51,7 +51,11 @@ if ($num > 0) {
             "Field" => $Field,
             "Clout" => $Clout,
             "Flight" => $Flight,
-           
+            "WRS" => $WRS,
+            "UKRS" => $UKRS,
+            "COJ" => $COJ,
+            "Judge" => $Judge,
+
             
          
 
