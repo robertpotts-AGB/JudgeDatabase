@@ -16,7 +16,7 @@ $(document).ready(function(){
 });
 
 // function to show list of products
-function showlevel(){
+function showlevel(e){
 
 // get list of products from the API
     $.getJSON("/JudgeDatabase/api/shootrecords/NextLvelCalc.php", function(data){
@@ -29,7 +29,7 @@ function showlevel(){
     
    
 <!-- start table -->
-<table id='table1' class='table table-bordered table-hover data-table'>
+<table id='test' class='table table-bordered table-hover data-table'>
  
     <!-- creating our table heading -->
     <tr>
@@ -85,12 +85,32 @@ $.each(data.records, function(key, val) {
              <td>` + val.Conference + `</td>
             </tr>
                               
-        </tr>`;
+       `;
 
 }); 
 // end table
 
-read_products_html+=`</table>`;
+read_products_html+=`</table> 
+<script type="text/javascript">
+
+
+var trTags = document.getElementsByTagName("tr");
+for (var i = 2; i < trTags.length; i++) {
+  var tdFourthEl = trTags[i].children[2]; // starts with 0, so 3 is the 4th element
+  var tdSecondEl = trTags[i].children[1]; // starts with 0, so 3 is the 4th element
+   if (tdSecondEl.innerHTML == "null"){
+    
+      tdSecondEl.innerHTML ="0";
+  }
+  if (Number(tdSecondEl.innerHTML) > Number(tdFourthEl.innerHTML)) {
+    tdFourthEl.style.backgroundColor = "red";
+  } else if (Number(tdSecondEl.innerHTML) < Number(tdFourthEl.innerHTML)) {
+    tdFourthEl.style.backgroundColor = "DarkSeaGreen";
+  }
+ 
+}</script>
+
+ `;
 
 // inject to 'page-content' of our app
 $("#page-content").html(read_products_html);
