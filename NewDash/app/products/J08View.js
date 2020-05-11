@@ -35,13 +35,8 @@ function J08View(){
         <th class='w-5-pct'>Total Days</th>
        
             <th class='w-3-pct'>WA</th>
-            <th class='w-5-pct'>AGB</th>
+            <th class='w-5-pct'>AGB</th> 
             <th class='w-5-pct'>Training</th>
-            <th class='w-5-pct'>International</th>
-            <th class='w-5-pct'>National</th>
-            <th class='w-5-pct'>Regional</th>
-            <th class='w-5-pct'>County</th>
-            <th class='w-5-pct'>Club</th>
             <th class='w-5-pct'>WRS</th>
             <th class='w-5-pct'>UKRS</th>
             <th class='w-5-pct'>COJ</th>
@@ -65,11 +60,6 @@ $.each(data.records, function(key, val) {
             <td>` + val.WA + `</td>
             <td>` + val.AGB + `</td>
             <td>` + val.Training + `</td>
-            <td>` + val.International + `</td>
-            <td>` + val.National + `</td>
-            <td>` + val.Regional + `</td>
-            <td>` + val.County + `</td>
-            <td>` + val.Club + `</td>
             <td>` + val.WRS + `</td>
             <td>` + val.UKRS + `</td>
             <td>` + val.COJ + `</td>
