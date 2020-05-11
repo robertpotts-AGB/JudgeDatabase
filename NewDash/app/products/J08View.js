@@ -26,7 +26,7 @@ function J08View(){
   
     
 <!-- start table -->
-<table class='table table-bordered table-hover'>
+<table class='table table-bordered table-hover table-sm'>
  
     <!-- creating our table heading -->
     <tr>
@@ -42,10 +42,10 @@ function J08View(){
             <th class='w-5-pct'>Regional</th>
             <th class='w-5-pct'>County</th>
             <th class='w-5-pct'>Club</th>
-            <th class='w-5-pct'>Target</th>
-            <th class='w-5-pct'>Field</th>
-            <th class='w-5-pct'>Clout</th>
-            <th class='w-5-pct'>Flight</th>
+            <th class='w-5-pct'>WRS</th>
+            <th class='w-5-pct'>UKRS</th>
+            <th class='w-5-pct'>COJ</th>
+            <th class='w-5-pct'>Judge</th>
                       
             
     
@@ -70,10 +70,10 @@ $.each(data.records, function(key, val) {
             <td>` + val.Regional + `</td>
             <td>` + val.County + `</td>
             <td>` + val.Club + `</td>
-            <td>` + val.Target + `</td>
-            <td>` + val.Field + `</td>
-            <td>` + val.Clout + `</td>
-            <td>` + val.Flight + `</td>
+            <td>` + val.WRS + `</td>
+            <td>` + val.UKRS + `</td>
+            <td>` + val.COJ + `</td>
+            <td>` + val.Judge + `</td>
       
             
       
@@ -83,15 +83,12 @@ $.each(data.records, function(key, val) {
             <!-- 'action' buttons -->
             <td>
                 <!-- read shootrecords button -->
-             <!--   <button class='btn btn-primary m-r-5px read-one-shootrecords-button' data-id='` + val.ID + `'>
+              <button class='btn btn-primary m-r-5px read-one-shootrecords-button' data-id='` + val.ID + `'>
                     <span class='glyphicon glyphicon-eye-open'></span> Read
-                </button> -->
+                </button>
  
                 <!-- edit button -->
-                <button class='btn btn-info m-r-5px update-shootrecords-button' data-id='` + val.ID + `'>
-                    <span class='glyphicon glyphicon-edit'></span> Edit
-                </button>
-
+               
               </td>
  
         </tr>`;
