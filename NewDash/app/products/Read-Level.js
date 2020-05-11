@@ -104,7 +104,7 @@ for (var i = 2; i < trTags.length; i++) {
   }
   if (Number(tdSecondEl.innerHTML) > Number(tdFourthEl.innerHTML)) {
     tdFourthEl.style.backgroundColor = "red";
-  } else if (Number(tdSecondEl.innerHTML) < Number(tdFourthEl.innerHTML)) {
+  } else if (Number(tdSecondEl.innerHTML) <= Number(tdFourthEl.innerHTML)) {
     tdFourthEl.style.backgroundColor = "DarkSeaGreen";
   }
  
