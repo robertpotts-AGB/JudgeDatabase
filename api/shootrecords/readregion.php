@@ -46,7 +46,6 @@ if($num>0) {
             "EvOptional" => $EvOptional,
             "EvStatus" => $EvStatus,
             "EvRole" => $EvRole,
-            "region" => $EvRegion,
             "display_name" => $display_name
 
         );
