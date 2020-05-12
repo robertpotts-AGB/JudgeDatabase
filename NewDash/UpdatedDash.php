@@ -27,6 +27,7 @@ if(!isset($_SESSION['username'])){
 
 
 
+
 </head>
 <body>
 <!--<script src="app/products/read-products.js"></script>
@@ -95,7 +96,8 @@ if(!isset($_SESSION['username'])){
 
 <!-- jQuery library -->
 <script src="app/assets/js/jquery.js"></script>
-
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <!-- bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>
 

@@ -3,7 +3,10 @@ $(document).ready(function(){
 
 // when a 'read products' button was clicked
 $(document).on('click', '.readJLO-products-button', function(){
-showJLOProducts();
+   showJLOProducts();
+
+
+
     $("#page-content1").html("");
     $("#page-content2").html("");
     $("#page-content3").html("");
@@ -21,10 +24,11 @@ var read_products_html=`
 <!-- when clicked, it will load the create shootrecords form -->
 
 <!-- start table -->
-<table class='table table-bordered table-hover'>
+<table id=dtBasicExample class='table table-bordered table-hover'>
 
     <!-- creating our table heading -->
-    <tr>
+    <thead>
+    <tr>    
         <th class='w-5-pct'>Name</th>
         <th class='w-5-pct'>Date</th>
         <th class='w-5-pct'>Event Name</th>
@@ -36,7 +40,8 @@ var read_products_html=`
         <th class='w-3-pct'>Event Options</th>
         <th class='w-3-pct'>Status</th>
        <!-- <th class='w-10-pct text-align-center'>Action</th> -->
-    </tr>`;
+    </tr>
+</thead> <tbody>`;
 
     // loop through returned list of data
     $.each(data.records, function(key, val) {
@@ -62,10 +67,13 @@ var read_products_html=`
     </tr>`;
     });
     // end table
-    read_products_html+=`</table>`;
+    read_products_html+=`</tbody></table>`;
+
 // inject to 'page-content' of our app
 $("#page-content").html(read_products_html);
 // chage page title
+    $('#dtBasicExample').DataTable();
+    $('.dataTables_length').addClass('bs-select');
 changePageTitle("Regional Judge Records");
 
 });

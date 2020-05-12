@@ -26,10 +26,10 @@ function showProducts(){
   
     
 <!-- start table -->
-<table class='table table-bordered table-hover'>
+<table id="dtMyShoots" class='table table-bordered table-hover w-auto text-nowrap '>
  
     <!-- creating our table heading -->
-    <tr>
+   <thead> <tr>
         <th class='w-5-pct'>Date</th>
         <th class='w-5-pct'>Event Name</th>
         <th class='w-5-pct'>Event Round</th>
@@ -40,7 +40,7 @@ function showProducts(){
         <th class='w-3-pct'>Event Options</th>
         <th class='w-3-pct'>Status</th>
         <th class='w-10-pct text-align-center'>Action</th>
-    </tr>`;
+    </tr></thead><tbody>`;
      
 // loop through returned list of data
 $.each(data.records, function(key, val) {
@@ -81,9 +81,11 @@ $.each(data.records, function(key, val) {
         </tr>`;
 }); 
 // end table
-read_products_html+=`</table>`;
+read_products_html+=`</tbody></table>`;
 // inject to 'page-content' of our app
 $("#page-content").html(read_products_html);
+        $('#dtMyShoots').DataTable();
+       // $('.dataTables_length').addClass('bs-select');
 // chage page title
 changePageTitle("My Shoots");
 
