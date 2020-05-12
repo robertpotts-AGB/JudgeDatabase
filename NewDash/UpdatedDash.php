@@ -55,7 +55,7 @@ if(!isset($_SESSION['username'])){
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="#"><span class='create-shootrecords-button'>Add a shoot</span></a></li>
-                    <li><a href="#"><span class='read-products-button'>My Current Shoots</span></a></li>
+                    <li><a href="#"><span class='read-products-button'>My Shoots</span></a></li>
                     <li><a href="#"><span class='upload-shootrecords-button'>Upload Shoots from J07</span></a></li>
                     <li><a href="#"><span class='personalexport-shootrecords-button'>Export my shoots</span></a></li>
                     <li><a href="#"><span class='read-level-button'>Current Level statistics</span></a></li>
@@ -66,7 +66,7 @@ if(!isset($_SESSION['username'])){
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">JLO Overview
                     <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#"><span class=readJLO-products-button>All Judges records</span></a></li>
+                    <li><a href="#"><span class=readJLO-products-button>Regional Judge Records</span></a></li>
                     <li><a href="#"><span class=JLOExport-shootrecords-button>Export All Records</span></a></li>
                     <li><a href="#"><span class=JLOstats-products-button>Statistics for the Region</span></a></li>
                     <li><a href="#"><span class=J08-view-button>Regional J08</span></a></li>
