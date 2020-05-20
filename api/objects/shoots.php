@@ -26,7 +26,7 @@ class Product
         $this->conn = $db;
     }
     function read(){
-        $username = ($_SESSION["username"]);
+        $username = ($_SESSION["agbID"]);
         // select all query
         $query = "SELECT
                 ID, AGBNo, EvName, EvRound, EvDate, EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole
