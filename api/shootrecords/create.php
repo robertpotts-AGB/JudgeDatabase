@@ -36,7 +36,7 @@ if (
 ) {
 
     // set shootrecords property values
-    $product->AGBNo = ($_SESSION["username"]);
+    $product->AGBNo = ($_SESSION["agbID"]);
     $product->EvName = $data->EvName;
     $product->EvRound = $data->EvRound;
     $product->EvDate = $data->EvDate;
