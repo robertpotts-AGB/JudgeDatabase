@@ -55,6 +55,7 @@ if ($num > 0) {
             "UKRS" => $UKRS,
             "COJ" => $COJ,
             "Judge" => $Judge,
+            "DOS" => $DOS,
 
             
          

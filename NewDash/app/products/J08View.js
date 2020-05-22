@@ -41,6 +41,7 @@ function J08View(){
             <th class='w-5-pct'>UKRS</th>
             <th class='w-5-pct'>COJ</th>
             <th class='w-5-pct'>Judge</th>
+            <th class='w-5-pct'>DOS</th>
                       
             
     
@@ -64,6 +65,7 @@ $.each(data.records, function(key, val) {
             <td>` + val.UKRS + `</td>
             <td>` + val.COJ + `</td>
             <td>` + val.Judge + `</td>
+            <td>` + val.DOS + `</td>
       
             
       
