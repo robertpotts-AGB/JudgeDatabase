@@ -4,12 +4,14 @@ Session_start();
 include_once '../config/database.php';
 $agbno=($_SESSION["username"]);
 $Region = ($_SESSION["region"]);
+$year = ($_SESSION["ShYear"]);
 $database = new Database();
 $db = $database->getConnection();
 
 
+
 $result = "SELECT a.*, display_name FROM shootrec a, registered_users
-            WHERE AGBNo = agb_no AND region ='$Region' ";
+            WHERE AGBNo = agb_no AND region ='$Region' AND YEAR(EvDate)=$year";
 //$shrecs = $db->query($result);
 
 $stmt = $db->prepare($result);

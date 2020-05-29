@@ -44,7 +44,7 @@ if (isset($_POST["btn_upload"])) {
                         if ($column[5] != "") {
                             $EvLevType = "International";
                         } elseif ($column[6] != "") {
-                            $EvLevType = "Natonal";
+                            $EvLevType = "National";
                         } elseif ($column[7] != "") {
                             $EvLevType = "Regional";
                         } elseif ($column[8] != "") {

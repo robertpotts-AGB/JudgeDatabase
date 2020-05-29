@@ -30,6 +30,7 @@ try
            $_SESSION["CurrLevel"] = $row[6];
            $_SESSION["NextLevel"] = $row[11];
            $_SESSION["agbID"] = $row[5];
+           $_SESSION["ShYear"] = date("Y");
 
            }
 

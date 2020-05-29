@@ -26,7 +26,7 @@ $(document).ready(function(){
  
         <tr>
             <td>Shoot Date</td>
-            <td><input type='date' name='EvDate' class='form-control' required /></td>
+            <td><input type='date' name='EvDate' class='form-control' required max="2022-01-01" /></td>
         </tr>
         <!-- name field -->
         <tr>
@@ -97,7 +97,7 @@ $(document).ready(function(){
         </tr>
           <tr>
             <td>Optional Event Information</td>
-            <td><select name='EvOptional' class='form-control' required >
+            <td><select name='EvOptional' class='form-control' >
              <option value="">...Select</option>
              <option value="H2H">Head to Head event</option>
              <option value="Indoor">Indoor</option></select></td>

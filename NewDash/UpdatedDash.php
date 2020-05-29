@@ -83,11 +83,12 @@ if(!isset($_SESSION['username'])){
             <a class="navbar-brand pull-right">You are logged in as <?php echo $_SESSION["displayName"]?> </a>
         </ul>
 
-
         <button onclick="window.location.href = './logout.php';" class="btn btn-danger navbar-btn logout-button m-b-15px ">Logout</button>
 
 
+
         <button class="btn btn-success navbar-btn create-shootrecords-button pull-right m-b-15px ">Add New Shoot</button>
+        <a href="app/products/datechange.php"> Showing shoots for <?php echo $_SESSION["ShYear"] ?> </a>
     </div>
 </nav>
 
