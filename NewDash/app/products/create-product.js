@@ -26,7 +26,7 @@ $(document).ready(function(){
  
         <tr>
             <td>Shoot Date</td>
-            <td><input type='date' name='EvDate' class='form-control' required max="2022-01-01" /></td>
+            <td><input type='date' name='EvDate' class='form-control' required max="2022-01-01" min="2010-01-01" /></td>
         </tr>
         <!-- name field -->
         <tr>
