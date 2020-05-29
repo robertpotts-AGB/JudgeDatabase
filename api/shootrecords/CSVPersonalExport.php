@@ -2,7 +2,7 @@
 Session_start();
 // get database connection
 include_once '../config/database.php';
-$agbno=($_SESSION["username"]);
+$agbno=($_SESSION["agbID"]);
 
 $database = new Database();
 $db = $database->getConnection();
