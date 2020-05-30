@@ -120,7 +120,7 @@ if(!isset($_SESSION['username'])){
 <script src="app/products/personal-export.js"></script>
 <script src="app/products/JLOStats.js"></script>
 <script src="app/products/J08View.js"></script>
-<script src="app/products/Upload-JLO.js"></script>
+<script src="app/products/upload-JLO.js"></script>
 <script src="app/products/Read-Level.js"></script>
 </body>
 </html>
