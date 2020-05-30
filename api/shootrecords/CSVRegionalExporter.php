@@ -11,7 +11,7 @@ $db = $database->getConnection();
 
 
 $result = "SELECT a.*, display_name FROM shootrec a, registered_users
-            WHERE AGBNo = agb_no AND region ='$Region' AND YEAR(EvDate)=$year";
+            WHERE AGBNo = agb_no AND region ='$Region' AND YEAR(EvDate)='$year'";
 //$shrecs = $db->query($result);
 
 $stmt = $db->prepare($result);

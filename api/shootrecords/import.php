@@ -56,7 +56,7 @@ if (isset($_POST["btn_upload"])) {
                         //Handle EvLevelType
                         $EvDiscType = "";
                         if ($column[10] != "") {
-                            $EvDiscType = "Target";
+                            $EvDiscType = "Target Outdoor";
                         } elseif ($column[11] != "") {
                             $EvDiscType = "Field";
                         } elseif ($column[12] != "") {
@@ -70,7 +70,7 @@ if (isset($_POST["btn_upload"])) {
                         //Handle EvOptionType
                         $EvOptType = "";
                         if ($column[15] != "") {
-                            $EvOptType = "Indoor";
+                            $EvDiscType = "Target Indoor";
                         } elseif ($column[16] != "") {
                             $EvOptType = "H2H";
                         }
