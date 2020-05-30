@@ -72,6 +72,7 @@ if(!isset($_SESSION['username'])){
                     <li><a href="#"><span class=JLOstats-products-button>Statistics for the Region</span></a></li>
                     <li><a href="#"><span class=J08-view-button>Regional J08</span></a></li>
                     <li><a href="#"><span class=J08-download-button>Regional J08 Download</span></a></li>
+                    <li><a href="#"><span class=upload-JLO-button>JLO J07 Uploader</span></a></li>
                   <!--  <li><a href="#"><span class=JLOstats-level-products-button>Statistics by Event Level</span></a></li>
                      <li><a href="#"><span class=JLOstats-role-products-button>Statistics by Role</span></a></li>
                       <li><a href="#"><span class=JLOstats-type-products-button>Statistics by Type</span></a></li>-->
@@ -119,6 +120,7 @@ if(!isset($_SESSION['username'])){
 <script src="app/products/personal-export.js"></script>
 <script src="app/products/JLOStats.js"></script>
 <script src="app/products/J08View.js"></script>
+<script src="app/products/Upload-JLO.js"></script>
 <script src="app/products/Read-Level.js"></script>
 </body>
 </html>
