@@ -39,6 +39,10 @@ function J08View(){
             <th class='w-5-pct'>Training</th>
             <th class='w-5-pct'>WRS</th>
             <th class='w-5-pct'>UKRS</th>
+            <th class='w-5-pct'>Non-RS</th>
+            <th class='w-5-pct'>Target</th>
+            <th class='w-5-pct'>Field</th>
+            <th class='w-5-pct'>Clout</th>
             <th class='w-5-pct'>COJ</th>
             <th class='w-5-pct'>Judge</th>
             <th class='w-5-pct'>DOS</th>
@@ -63,9 +67,14 @@ $.each(data.records, function(key, val) {
             <td>` + val.Training + `</td>
             <td>` + val.WRS + `</td>
             <td>` + val.UKRS + `</td>
+            <td>` + val.NonRS + `</td>
+            <td>` + val.Target + `</td>
+            <td>` + val.Field + `</td>
+            <td>` + val.Clout + `</td>    
             <td>` + val.COJ + `</td>
             <td>` + val.Judge + `</td>
             <td>` + val.DOS + `</td>
+            
       
             
       

@@ -56,6 +56,7 @@ if ($num > 0) {
             "COJ" => $COJ,
             "Judge" => $Judge,
             "DOS" => $DOS,
+            "NonRS" =>$NonRS,
 
             
          
