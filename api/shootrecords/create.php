@@ -30,7 +30,6 @@ if (
     !empty($data->EvOrg) &&
     !empty($data->EvLevel) &&
     !empty($data->EvDiscipline) &&
-    !empty($data->EvOptional) &&
     !empty($data->EvStatus) &&
     !empty($data->EvRole)
 ) {
