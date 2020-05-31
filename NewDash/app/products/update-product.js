@@ -71,7 +71,8 @@ $(document).ready(function(){
             <td>Type</td>
             <td><select name='EvDiscipline' class='form-control' required>
                 <option value=\"` + disc + `\">` + disc + `</option>
-                <option value="Target">Target</option>
+                <option value="TGTOutdoor">Target Outdoor</option>
+                <option value="TGTIndoor">Target Indoor</option>
                 <option value="Field">Field</option>
                 <option value="Clout">Clout</option>
                 <option value="Flight">Flight</option></select></td>
