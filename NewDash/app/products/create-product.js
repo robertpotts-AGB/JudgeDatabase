@@ -85,7 +85,8 @@ $(document).ready(function(){
             <td>Event Type</td>
             <td><select name='EvDiscipline' class='form-control' required>
                 <option value="">...Select</option>
-                <option value="Target">Target</option>
+                <option value="TGTOutdoor">Target Outdoor</option>
+                <option value="TGTIndoor">Target Indoor</option>
                 <option value="Field">Field</option>
                 <option value="3D">3D</option>
                 <option value="Clout">Clout</option>
@@ -100,7 +101,7 @@ $(document).ready(function(){
             <td><select name='EvOptional' class='form-control' >
              <option value="">...Select</option>
              <option value="H2H">Head to Head event</option>
-             <option value="Indoor">Indoor</option></select></td>
+             </select></td>
                
                
         </tr>
