@@ -98,7 +98,7 @@ if (isset($_POST["btn_upload"])) {
                         } elseif ($column[24] != "") {
                             $EvRoleType = "Training";
                         }
-                        $AGBNUMBER = ($_SESSION["username"]);
+                        $AGBNUMBER = ($_SESSION["agbID"]);
                         //convert date to Import Date
                         $ShootDate=DateTime::createFromFormat('n/j/Y',$column[0]);
                         $importDate = $ShootDate->format('Y-m-d');
