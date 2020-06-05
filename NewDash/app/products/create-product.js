@@ -53,14 +53,14 @@ $(document).ready(function(){
             <td>Event Type</td>
             <td><select id="evtypes"  onChange="populateRound('evrules','evtypes','evround');" name='EvDiscipline' class='form-control' required>
                 <option id="select" value="">...Select</option>
-             
+                          
                 </select></td>
         </tr>
         <tr>
             <td>Shoot Round</td>
             <td><select name='EvRound'  id="evround" class='form-control' required >
                 <option id="select1" selected value="">...Select</option>
-           
+                          
               </select></td>
         </tr>
         <!-- price field -->
@@ -172,43 +172,43 @@ $(document).ready(function(){
                     if(evrule.value =="WA")
                         {
                     if(evtype.value == "TGTOutdoor"){
-                        optionArray = ["720|WA 70/60/50","2x720|Double WA 70/60/50" ,"WA1440|1440 and Metrics I-V","2x1440/Metrics|Double 1440 and Metrics I-V","900|WA900"];
+                        optionArray = ["720|WA 70/60/50","2x720|Double WA 70/60/50" ,"WA1440|1440 and Metrics I-V","2x1440/Metrics|Double 1440 and Metrics I-V","900|WA900","ClubShoot|Club Shoot / Custom Round"];
                     }
                     else if(evtype.value == "TGTIndoor"){
-                        optionArray = ["WA18|WA 18","WA25|WA 25","Double18|Double 18m","Double25|Double 25m"];
+                        optionArray = ["WA18|WA 18","WA25|WA 25","Double18|Double 18m","Double25|Double 25m","ClubShoot|Club Shoot / Custom Round"];
                     }
                        else if(evtype.value == "Field"){
-                        optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24"];
+                        optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "3D"){
-                        optionArray = ["3D|3D"];
+                        optionArray = ["3D|3D","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "Clout"){
-                        optionArray = ["1xClout|One Way Clout","2xClout|Two Way Clout"];
+                        optionArray = ["1xClout|One Way Clout","2xClout|Two Way Clout","ClubShoot|Club Shoot / Custom Round"];
                     }
                           else if(evtype.value == "Flight"){
-                        optionArray = ["Flight|Flight"];
+                        optionArray = ["Flight|Flight","ClubShoot|Club Shoot / Custom Round"];
                     }
                   }
                     else if(evrule.value == "AGB")
                     { 
                         if(evtype.value == "TGTOutdoor"){
-                        optionArray = ["York/Hereford/Bristols|York/Hereford/Bristols","Nationals|Nationals","Metrics|Metrics I-V","American|American","Albion/Windsors|St George/Albion/Windsors","Short Metrics|Short Metrics","Long Metrics|Long Metrics"];
+                        optionArray = ["York/Hereford/Bristols|York/Hereford/Bristols","Nationals|Nationals","Metrics|Metrics I-V","American|American","Albion/Windsors|St George/Albion/Windsors","Short Metrics|Short Metrics","Long Metrics|Long Metrics","ClubShoot|Club Shoot / Custom Round"];
                     }
                     else if(evtype.value == "TGTIndoor"){
-                        optionArray = ["Stafford|Stafford","Portsmouth|Portsmouth","Bray1|Bray 1","Bray2|Bray 2","Worcester|Worcester","Vegas|Vegas"];
+                        optionArray = ["Stafford|Stafford","Portsmouth|Portsmouth","Bray1|Bray 1","Bray2|Bray 2","Worcester|Worcester","Vegas|Vegas","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "Field"){
-                        optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24"];
+                        optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "3D"){
-                        optionArray = ["3D|3D"];
+                        optionArray = ["3D|3D","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "Clout"){
-                        optionArray = ["1xClout|One Way Clout","2xClout|Two Way Clout"];
+                        optionArray = ["1xClout|One Way Clout","2xClout|Two Way Clout","ClubShoot|Club Shoot / Custom Round"];
                     }
                           else if(evtype.value == "Flight"){
-                        optionArray = ["Flight|Flight"];
+                        optionArray = ["Flight|Flight","ClubShoot|Club Shoot / Custom Round"];
                     }
                    
                     }
