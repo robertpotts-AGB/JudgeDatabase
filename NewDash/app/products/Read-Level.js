@@ -80,7 +80,7 @@ $.each(data.records, function(key, val) {
              <td>` + val.H2H + `</td>
             </tr>
             <tr>
-             <td> Minimum Confrence Attendance</td>
+             <td> Minimum Conference Attendance</td>
             <td>` + val.LvNatConf + `</td>
              <td>` + val.Conference + `</td>
             </tr>
