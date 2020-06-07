@@ -138,7 +138,7 @@ $(document).ready(function(){
             <!-- button to submit form -->
             <td>
                 <button type='submit' class='btn btn-info'>
-                    <span class='glyphicon glyphicon-edit'></span> Update Product
+                    <span class='glyphicon glyphicon-edit'></span> Update Shoot
                 </button>
             </td>
  
