@@ -63,3 +63,10 @@ input[type="date"]::-webkit-datetime-edit-day-field{
     left: 4px;
 
 }
+.wrapper {
+    display: flex;
+
+}
+#sidebar {
+    min-width: 250px;
+}
