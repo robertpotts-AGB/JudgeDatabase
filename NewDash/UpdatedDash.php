@@ -87,7 +87,7 @@ if(!isset($_SESSION['username'])){
 
 <!-- our app will be injected here -->
 <div class="wrapper">
-    <nav id="sidebar" class="bg-light">
+    <nav id="sidebar" class="sidebar-expanded bg-light">
         <div class="sidebar-header">
             <h3>Utilities</h3>
         </div>
