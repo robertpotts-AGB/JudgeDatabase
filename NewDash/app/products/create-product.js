@@ -33,7 +33,7 @@ $(document).ready(function(){
  
          <div class="input-group form-group">
             <div class="input-group-prepend">
-                <label class="input-group-text">Shoot Date </label>
+                <label class="input-group-text">Shoot Date</label>
             </div>
                 <input type='date' name='EvDate' class='form-control' required max="2022-01-01" min="2010-01-01" />
          </div>   
