@@ -89,7 +89,7 @@ if(!isset($_SESSION['username'])){
 <div class="wrapper">
     <nav id="sidebar" class="bg-light">
         <div class="sidebar-header">
-            <h3>Utilites</h3>
+            <h3>Utilities</h3>
         </div>
         <ul class="list-unstyled components">
         <div>
