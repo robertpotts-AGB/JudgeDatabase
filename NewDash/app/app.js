@@ -24,7 +24,7 @@ $(document).ready(function(){
 </tr>
  <tr>
             <td>
-             <div class="panel panel-default" id='page-content2'></div>
+             <div  class="panel panel-default" id='page-content2'></div>
             </td>
             <td width="25%"></td>
             <td>
