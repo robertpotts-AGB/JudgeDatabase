@@ -93,11 +93,19 @@ if(!isset($_SESSION['username'])){
         </div>
         <ul class="list-unstyled components">
         <div>
-            <span class="navbar-text">Logged in as <?php echo $_SESSION["displayName"]?> </span>
+            <span class="navbar-text">Logged in as: <?php echo $_SESSION["displayName"]?> </span>
         </div>
+            <div>
+                <span class="navbar-text"> Current Grade: <?php echo $_SESSION["CurrLevel"]?> </span>
+            </div>
+            <div>
+                <span class="navbar-text"> In Current grade since: <?php echo $_SESSION["LevSince"]?> </span>
+            </div>
         <div>
             <a href="app/products/datechange.php"> Showing shoots for <?php echo $_SESSION["ShYear"] ?> </a>
-        </div>
+
+
+
         <div>
             <button onclick="window.location.href = './logout.php';" class="btn btn-danger navbar-btn logout-button m-b-15px ">Logout</button>
         </div>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="pottsy webserver" uploadOnCheckin="08f44fc6-aa5e-435b-85a0-af1059d41700">
+  <component name="PublishConfigData" serverName="pottsy webserver" persistUploadOnCheckin="false">
     <serverData>
       <paths name="pottsy webserver">
         <serverdata>
@@ -10,6 +10,5 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="pottsy webserver" />
   </component>
 </project>

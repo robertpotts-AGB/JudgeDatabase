@@ -34,7 +34,7 @@ function showlevel(e){
     <!-- creating our table heading -->
     <tr>
         <th class='w-5-pct'>Item</th>
-        <th class='w-5-pct' data-field="w">Next Level</th>
+        <th class='w-5-pct' data-field="w">Current Level Re-accreditation Requirements</th>
         <th class='w-5-pct' data-field="h">Your Statistics</th>
        
     </tr>`;
@@ -52,36 +52,37 @@ $.each(data.records, function(key, val) {
             </tr>
             <tr>
             <td> Minimum Days at current level required </td>
-            <td>` + val.LvMinDays + `</td>
+            <td>` + val.LvReMinDays + `</td>
+         
             <td>` + val.TotalDays + `</td>
             </tr>
             <td> Minimum World Record shoots </td>
-            <td>` + val.LvWRS + `</td>
+            <td>` + val.LvReWRS + `</td>
             <td>` + val.WRS + `</td>
             </tr>
             <tr>
              <td> Minimum RS Shoots </td>
-            <td>` + val.LvRS + `</td>
+            <td>` + val.LvReRS + `</td>
              <td>` + val.UKRS + `</td>
             </tr>
             <tr>
              <td> Minimum Indoors </td>
-            <td>` + val.LvIndoor + `</td>
+            <td>` + val.LvReIndoor + `</td>
              <td>` + val.Indoor + `</td>
             </tr>
             <tr>
              <td> Minimum events as COJ </td>
-            <td>` + val.LvCOJ + `</td>
+            <td>` + val.LvReCOJ + `</td>
              <td>` + val.COJ + `</td>
             </tr>
             <tr>
              <td> Minimum Head to Head events </td>
-            <td>` + val.LvH2H + `</td>
+            <td>` + val.LvReH2H + `</td>
              <td>` + val.H2H + `</td>
             </tr>
             <tr>
              <td> Minimum Conference Attendance</td>
-            <td>` + val.LvNatConf + `</td>
+            <td>` + val.LvReConf + `</td>
              <td>` + val.Conference + `</td>
             </tr>
                               
