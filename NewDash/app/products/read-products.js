@@ -86,6 +86,7 @@ read_products_html+=`</tbody></table>`;
 $("#page-content").html(read_products_html);
         $('#dtMyShoots').DataTable({
             responsive: true
+
         });
        // $('.dataTables_length').addClass('bs-select');
 // chage page title
