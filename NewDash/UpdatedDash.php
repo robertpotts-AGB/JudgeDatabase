@@ -83,7 +83,7 @@ if(!isset($_SESSION['username'])){
                     <a href="#"class="dropdown-item"> <span> Current Grade: <?php echo $_SESSION["CurrLevel"]?> </span></a>
                     <a href="#"class="dropdown-item"><span> Grade Since: <?php echo $_SESSION["LevSince"]?> </span></a>
                     <a href="app/products/datechange.php" class="dropdown-item"><span>Showing Year: <strong><?php echo $_SESSION["ShYear"] ?></strong></span> </a>
-                    <div><button onclick="window.location.href = './logout.php';" class="" btn btn-danger logout-button  ">Logout</button></div>
+                    <div><button onclick="window.location.href = './logout.php';" class="btn btn-danger logout-button  ">Logout</button></div>
                 </div>
             </li>
         </ul>
