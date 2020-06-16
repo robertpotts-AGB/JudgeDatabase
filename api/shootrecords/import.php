@@ -22,7 +22,7 @@ if (isset($_POST["btn_upload"])) {
         while (($fields = fgetcsv($file, 0, ",")) !== FALSE) {
             $count++;
             if ($count > 7) {
-                $stmt=$db->prepare("INSERT into shootrec (AGBNo,EvName,EvRound,EvDate,EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole) values (:AGB,:EvNameSet,:EvRoundSet,:EvDateSet,:EvOrgSet,:EvLevelSet,:EvDisciplineSet,:EvOptionalSet,:EvStatusSet,:EvRoleSet) ON DUPLICATE KEY UPDATE AGBNo = :AGB, EvDate = :EvDateSet ");
+                $stmt=$db->prepare("INSERT into shootrec (AGBNo,EvName,EvRound,EvDate,EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole) values (:AGB,:EvNameSet,:EvRoundSet,:EvDateSet,:EvOrgSet,:EvLevelSet,:EvDisciplineSet,:EvOptionalSet,:EvStatusSet,:EvRoleSet) ");
 
                 while (($column = fgetcsv($file, 10000, ",")) !== FALSE)  {
                     // split to date and time bits
@@ -123,6 +123,8 @@ if (isset($_POST["btn_upload"])) {
                     } else {
 
                         header("Location: /JudgeDatabase/NewDash/UpdatedDash.php");
+
+
                     }
 
                 } }
