@@ -273,10 +273,20 @@ $(document).ready(function(){
             success : function(result) {
                 // shootrecords was created, go back to products list
                 showProducts();
+                $("#flash").addClass("alert alert-success");
+                var success_html=`<strong>Shoot Added!</strong> You have Successfully Submitted your Shoot information.
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+`;
+                $("#flash").html(success_html);
+
             },
             error: function(xhr, resp, text) {
                 // show error to console
                 console.log(xhr, resp, text);
+
+                $("#flash").addClass("alert alert-primary");
             }
 
 
