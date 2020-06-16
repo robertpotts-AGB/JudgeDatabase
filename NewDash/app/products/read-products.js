@@ -84,7 +84,10 @@ $.each(data.records, function(key, val) {
 read_products_html+=`</tbody></table>`;
 // inject to 'page-content' of our app
 $("#page-content").html(read_products_html);
-        $('#dtMyShoots').DataTable();
+        $('#dtMyShoots').DataTable({
+            responsive: true
+
+        });
        // $('.dataTables_length').addClass('bs-select');
 // chage page title
 changePageTitle("My Shoots");
