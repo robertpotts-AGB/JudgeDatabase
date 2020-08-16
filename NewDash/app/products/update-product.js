@@ -122,7 +122,7 @@ $(document).ready(function(){
         </tr>
         <tr>
             <td>Optional</td>
-            <td><textarea name='EvOptional' class='form-control' required>` + optional + `</textarea></td>
+            <td><textarea name='EvOptional' class='form-control'>` + optional + `</textarea></td>
         </tr>
         
        
