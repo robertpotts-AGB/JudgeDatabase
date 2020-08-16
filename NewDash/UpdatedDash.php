@@ -30,6 +30,10 @@ if(!isset($_SESSION['username'])){
 
 </head>
 <body>
+<?php if ($_SESSION("ALERT") == 1){
+ echo'<div id="flash" class="alert alert-success" w-100-pct" ></div>' ;
+ }
+ ?>
 <div id="flash" class="alert alert-success" w-100-pct" ></div>
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
