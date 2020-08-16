@@ -30,7 +30,7 @@ if(!isset($_SESSION['username'])){
 
 </head>
 <body>
-<?php if ($_SESSION("ALERT") == 1){
+<?php if ($_SESSION["ALERT"] == 1){
  echo'<div id="flash" class="alert alert-success" w-100-pct" ></div>' ;
  }
  ?>
