@@ -26,7 +26,7 @@ function showProducts(){
   
     
 <!-- start table -->
-<div class="table-responsive">
+
 <table id="dtMyShoots" class='table table-bordered table-hover table-responsive' style="width:100%">
  
     <!-- creating our table heading -->
@@ -82,7 +82,7 @@ $.each(data.records, function(key, val) {
         </tr>`;
 }); 
 // end table
-read_products_html+=`</tbody></table></div>`;
+read_products_html+=`</tbody></table>`;
 // inject to 'page-content' of our app
 $("#page-content").html(read_products_html);
         $('#dtMyShoots').DataTable({
