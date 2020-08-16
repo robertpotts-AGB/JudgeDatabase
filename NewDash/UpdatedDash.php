@@ -30,8 +30,7 @@ if(!isset($_SESSION['username'])){
 
 </head>
 <body>
-<div id="flash" role="alert">
-</div>
+<div id="flash" class="alert alert-success" w-100-pct" ></div>
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -69,26 +68,16 @@ if(!isset($_SESSION['username'])){
                       
    
                 </div>
-            </li>
-            ';
+            </li>';
             } ?>
-            </ul>
-                 <ul class="navbar-nav">
-            <li class="nav-item dropdown ">
-                <a href="#" class="nav-link dropdown-toggle " id="navDropDownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    My Details
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navDropDownLink">
-                    <a href="#"class="dropdown-item"><span>Logged in as: <?php echo $_SESSION["displayName"]?> </span></a>
-                    <a href="#"class="dropdown-item"> <span> Current Grade: <?php echo $_SESSION["CurrLevel"]?> </span></a>
-                    <a href="#"class="dropdown-item"><span> Grade Since: <?php echo $_SESSION["LevSince"]?> </span></a>
-                    <a href="app/products/datechange.php" class="dropdown-item"><span>Showing Year: <strong><?php echo $_SESSION["ShYear"] ?></strong></span> </a>
-                    <div><button onclick="window.location.href = './logout.php';" class="btn btn-danger logout-button  ">Logout</button></div>
-                </div>
-            </li>
+
         </ul>
 
 
+
+        <div>
+            <button class="btn btn-success navbar-btn create-shootrecords-button m-b-15px ">Add New Shoot</button>
+        </div>
 
 
 
@@ -97,18 +86,41 @@ if(!isset($_SESSION['username'])){
 </nav>
 
 <!-- our app will be injected here -->
+<div class="wrapper">
+    <nav id="sidebar" class="sidebar-expanded bg-light">
+        <div class="sidebar-header">
+            <h3>Utilities</h3>
+        </div>
+        <ul class="list-unstyled components">
+        <div>
+            <span class="navbar-text">Logged in as: <?php echo $_SESSION["displayName"]?> </span>
+        </div>
+            <div>
+                <span class="navbar-text"> Current Grade: <?php echo $_SESSION["CurrLevel"]?> </span>
+            </div>
+            <div>
+                <span class="navbar-text"> In Current grade since: <?php echo $_SESSION["LevSince"]?> </span>
+            </div>
+        <div>
+            <a href="app/products/datechange.php"> Showing shoots for <?php echo $_SESSION["ShYear"] ?> </a>
 
+
+
+        <div>
+            <button onclick="window.location.href = './logout.php';" class="btn btn-danger navbar-btn logout-button m-b-15px ">Logout</button>
+        </div>
+        </ul>
+    </nav>
 
     <div id="app" class="panel panel-default w-100-pct" ></div>
 
-
+</div>
 
 
 <!-- jQuery library -->
 <script src="app/assets/js/jquery.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
-<script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/fixedheader/3.1.7/js/dataTables.fixedHeader.min.js"></script>
+<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <!-- bootstrap JavaScript -->
 
 
