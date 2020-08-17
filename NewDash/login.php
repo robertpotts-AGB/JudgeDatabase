@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../api/config/database.php';
-
+$_SESSION["ALERT"]= 0;
 
 try
 {
