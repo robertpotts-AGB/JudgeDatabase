@@ -102,7 +102,7 @@ if(!isset($_SESSION['username'])){
                 <span class="navbar-text"> Current Grade: <?php echo $_SESSION["CurrLevel"]?> </span>
             </div>
             <div>
-                <span class="navbar-text"> In Current grade since: <?php echo $_SESSION["LevSince"]?> </span>
+                <span class="navbar-text"> In Current grade since:</span><span><p> <?php echo $_SESSION["LevSince"]?> </p> </span>
             </div>
         <div>
             <a href="app/products/datechange.php"> Showing shoots for <?php echo $_SESSION["ShYear"] ?> </a>
