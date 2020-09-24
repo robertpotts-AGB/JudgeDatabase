@@ -34,7 +34,6 @@ if(!isset($_SESSION['username'])){
  echo'<div id="flash" class="alert alert-success" w-100-pct" ></div>' ;
  }
  ?>
-<div id="flash" class="alert alert-success" w-100-pct" ></div>
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

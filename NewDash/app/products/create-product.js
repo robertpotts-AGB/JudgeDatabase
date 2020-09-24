@@ -195,7 +195,7 @@ $(document).ready(function(){
                         optionArray = ["720|WA 70/60/50","2x720|Double WA 70/60/50" ,"WA1440|1440 and Metrics I-V","2x1440/Metrics|Double 1440 and Metrics I-V","900|WA900","ClubShoot|Club Shoot / Custom Round"];
                     }
                     else if(evtype.value == "TGTIndoor"){
-                        optionArray = ["WA18|WA 18","WA25|WA 25","Double18|Double 18m","Double25|Double 25m","ClubShoot|Club Shoot / Custom Round"];
+                        optionArray = ["WA18|WA 18","WA25|WA 25","WACombined|WA Combined Round","Double18|Double 18m","Double25|Double 25m","ClubShoot|Club Shoot / Custom Round"];
                     }
                        else if(evtype.value == "Field"){
                         optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","ClubShoot|Club Shoot / Custom Round"];
