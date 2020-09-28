@@ -28,7 +28,7 @@ if (isset($_POST["btn_upload"])) {
                     // split to date and time bits
                     //$bits = explode("/", $column[0]);
                     //$new = mktime($bits['1'], $bits['0'], $bits['2']);
-                    $date = date("Y/m/d", $new);
+                    //$date = date("Y/m/d", $new);
                     //Handle EVOrg Type
                     if($column[1] != "") {
                         $EvOrgType = "";
