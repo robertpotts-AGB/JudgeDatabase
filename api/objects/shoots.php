@@ -224,9 +224,9 @@ class Product
     {
         $Region = ($_SESSION["region"]);
         // select all query
-        $query = "SELECT COUNT(shootrec.EvOrg) AS OrgTotal,EvOrg,region
-            FROM shootrec, registered_users
-             WHERE region = '$Region'
+        $query = "SELECT COUNT(shootrec.EvOrg) AS OrgTotal,EvOrg
+            FROM shootrec
+            INNER JOIN registered_users ON shootrec.AGBNo = registered_users.agb_no WHERE region = '$Region'
             GROUP BY EvOrg";
 
         // prepare query statement
@@ -241,10 +241,11 @@ class Product
     {
         $Region = ($_SESSION["region"]);
         // select all query
-        $query = "SELECT COUNT(shootrec.EvLevel) AS LevelTotal, EvLevel,region
-            FROM shootrec, registered_users
+        $query = "SELECT COUNT(shootrec.EvLevel) AS LevelTotal, EvLevel
+            FROM shootrec
+           INNER JOIN registered_users ON shootrec.AGBNo = registered_users.agb_no
             WHERE region ='$Region'
-		Group By EvLevel, region
+		Group By EvLevel
 		ORDER BY LevelTotal";
 
         // prepare query statement
@@ -259,10 +260,10 @@ class Product
     {
         $Region = ($_SESSION["region"]);
         // select all query
-        $query = "SELECT COUNT(shootrec.EvRole) AS RoleTotal, EvRole,region
-            FROM shootrec, registered_users
-            WHERE region ='$Region'
-		Group By EvRole, region";
+        $query = "SELECT COUNT(shootrec.EvRole) AS RoleTotal, EvRole
+            FROM shootrec
+           INNER JOIN registered_users ON shootrec.AGBNo = registered_users.agb_no WHERE region ='$Region'
+		Group By EvRole";
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
@@ -276,10 +277,11 @@ class Product
     {
         $Region = ($_SESSION["region"]);
         // select all query
-        $query = "SELECT COUNT(shootrec.EvDiscipline) AS TypeTotal, EvDiscipline,region
-            FROM shootrec, registered_users
-            WHERE region ='$Region'
-		Group By EvDiscipline, region";
+        $query = "SELECT COUNT(shootrec.EvDiscipline) AS TypeTotal, EvDiscipline
+            FROM shootrec
+           INNER JOIN registered_users ON shootrec.AGBNo = registered_users.agb_no
+        WHERE region ='$Region'
+		Group By EvDiscipline";
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
@@ -293,10 +295,10 @@ class Product
     {
         $Region = ($_SESSION["region"]);
         // select all query
-        $query = "SELECT COUNT(shootrec.EvStatus) AS StatusTotal, EvStatus,region
-            FROM shootrec, registered_users
-            WHERE region ='$Region'
-		Group By EvStatus, region";
+        $query = "SELECT COUNT(shootrec.EvStatus) AS StatusTotal, EvStatus,
+            FROM shootrec
+            INNER JOIN registered_users ON shootrec.AGBNo = registered_users.agb_no WHERE region ='$Region'
+		Group By EvStatus";
 
         // prepare query statement
         $stmt = $this->conn->prepare($query);
