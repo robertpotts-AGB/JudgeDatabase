@@ -3,14 +3,7 @@ $(document).ready(function(){
     // show html form when 'create shootrecords' button was clicked
     $(document).on('click', '.create-shootrecords-button', function(){
 // load list of categories
-        $.getJSON("/JudgeDatabase/api/shootrecords/read.php", function(data){
-// build categories option html
-// loop through returned list of data
-            var categories_options_html=`<select name='category_id' class='form-control'>`;
-            $.each(data.records, function(key, val){
-                categories_options_html+=`<option value='` + val.id + `'>` + val.name + `</option>`;
-            });
-            categories_options_html+=`</select>`;
+
             // we have our html form here where shootrecords information will be entered
 // we used the 'required' html5 property to prevent empty fields
             window.addEventListener( "pageshow", function ( event ) {
@@ -257,7 +250,7 @@ $(document).ready(function(){
             changePageTitle("Create Shoot");
         });
 
-    });
+
 
 // will run if create shootrecords form was submitted
     $(document).on('submit', '#create-shootrecords-form', function(){
