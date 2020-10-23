@@ -19,7 +19,7 @@ $(document).ready(function(){
         <span class='glyphicon glyphicon-list'></span> My Shoots
     </div> ->
    
-    <!-- 'create shootrecords' html form -->
+
 <form id='create-shootrecords-form' action='#' method='post'>
    
         <!-- name field -->
