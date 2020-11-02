@@ -18,7 +18,7 @@ $(document).ready(function(){
    <!-- <div id='read-products' class='btn btn-success pull-right m-b-15px read-products-button'>
         <span class='glyphicon glyphicon-list'></span> My Shoots
     </div> ->
-   
+   <!-->
 
 <form id='create-shootrecords-form' action='#' method='post'>
    
