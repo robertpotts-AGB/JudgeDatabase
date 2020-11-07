@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../api/config/database.php';
-
+$_SESSION["ALERT"]= 0;
 
 try
 {
@@ -31,7 +31,7 @@ try
            $_SESSION["NextLevel"] = $row[11];
            $_SESSION["agbID"] = $row[5];
            $_SESSION["ShYear"] = date("Y");
-
+           $_SESSION["LevSince"] = $row[12];
            }
 
 

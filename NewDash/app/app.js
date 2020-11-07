@@ -5,7 +5,7 @@ $(document).ready(function(){
         <div class='container'>
  
             <div class='page-header'>
-                <h1 id='page-title' class="well" >My Shoots</h1>
+                <h1 id='page-title' class="card card-body bg-light" >My Shoots</h1>
             </div>
             <div id='page-content'></div>
             <div class='container'>
@@ -24,7 +24,7 @@ $(document).ready(function(){
 </tr>
  <tr>
             <td>
-             <div class="panel panel-default" id='page-content2'></div>
+             <div  class="panel panel-default" id='page-content2'></div>
             </td>
             <td width="25%"></td>
             <td>

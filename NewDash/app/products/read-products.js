@@ -26,7 +26,8 @@ function showProducts(){
   
     
 <!-- start table -->
-<table id="dtMyShoots" class='table table-bordered table-hover w-auto text-nowrap '>
+
+<table id="dtMyShoots" class='table table-bordered table-hover table-responsive' style="width:100%">
  
     <!-- creating our table heading -->
    <thead> <tr>
@@ -84,7 +85,12 @@ $.each(data.records, function(key, val) {
 read_products_html+=`</tbody></table>`;
 // inject to 'page-content' of our app
 $("#page-content").html(read_products_html);
-        $('#dtMyShoots').DataTable();
+        $('#dtMyShoots').DataTable({
+            responsive: {
+                details: false
+        }
+
+        });
        // $('.dataTables_length').addClass('bs-select');
 // chage page title
 changePageTitle("My Shoots");

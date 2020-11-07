@@ -22,13 +22,13 @@ if (isset($_POST["btn_upload"])) {
         while (($fields = fgetcsv($file, 0, ",")) !== FALSE) {
             $count++;
             if ($count > 7) {
-                $stmt=$db->prepare("INSERT into shootrec (AGBNo,EvName,EvRound,EvDate,EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole) values (:AGB,:EvNameSet,:EvRoundSet,:EvDateSet,:EvOrgSet,:EvLevelSet,:EvDisciplineSet,:EvOptionalSet,:EvStatusSet,:EvRoleSet)");
+                $stmt=$db->prepare("INSERT into shootrec (AGBNo,EvName,EvRound,EvDate,EvOrg,EvLevel,EvDiscipline,EvOptional,EvStatus,EvRole) values (:AGB,:EvNameSet,:EvRoundSet,:EvDateSet,:EvOrgSet,:EvLevelSet,:EvDisciplineSet,:EvOptionalSet,:EvStatusSet,:EvRoleSet) ");
 
                 while (($column = fgetcsv($file, 10000, ",")) !== FALSE)  {
                     // split to date and time bits
                     //$bits = explode("/", $column[0]);
                     //$new = mktime($bits['1'], $bits['0'], $bits['2']);
-                    $date = date("Y/m/d", $new);
+                    //$date = date("Y/m/d", $new);
                     //Handle EVOrg Type
                     if($column[1] != "") {
                         $EvOrgType = "";
@@ -123,6 +123,8 @@ if (isset($_POST["btn_upload"])) {
                     } else {
 
                         header("Location: /JudgeDatabase/NewDash/UpdatedDash.php");
+
+
                     }
 
                 } }

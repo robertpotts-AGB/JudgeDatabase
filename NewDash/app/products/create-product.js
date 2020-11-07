@@ -3,14 +3,7 @@ $(document).ready(function(){
     // show html form when 'create shootrecords' button was clicked
     $(document).on('click', '.create-shootrecords-button', function(){
 // load list of categories
-        $.getJSON("/JudgeDatabase/api/shootrecords/read.php", function(data){
-// build categories option html
-// loop through returned list of data
-            var categories_options_html=`<select name='category_id' class='form-control'>`;
-            $.each(data.records, function(key, val){
-                categories_options_html+=`<option value='` + val.id + `'>` + val.name + `</option>`;
-            });
-            categories_options_html+=`</select>`;
+
             // we have our html form here where shootrecords information will be entered
 // we used the 'required' html5 property to prevent empty fields
             window.addEventListener( "pageshow", function ( event ) {
@@ -22,107 +15,127 @@ $(document).ready(function(){
             var create_product_html=`
  
     <!-- 'read products' button to show list of products -->
-    <div id='read-products' class='btn btn-primary pull-right m-b-15px read-products-button'>
+   <!-- <div id='read-products' class='btn btn-success pull-right m-b-15px read-products-button'>
         <span class='glyphicon glyphicon-list'></span> My Shoots
-    </div>
+    </div> ->
+   <!-->
+
+<form id='create-shootrecords-form' action='#' method='post'>
    
-    <!-- 'create shootrecords' html form -->
-<form id='create-shootrecords-form' action='#' method='post' border='0'>
-    <table class='table table-hover table-responsive table-bordered'>
         <!-- name field -->
  
-        <tr>
-            <td>Shoot Date</td>
-            <td><input type='date' name='EvDate' class='form-control' required max="2022-01-01" min="2010-01-01" /></td>
-        </tr>
+         <div class="input-group form-group">
+            <div class="input-group-prepend">
+                <label class="input-group-text">Shoot Date</label>
+            </div>
+                <input type='date' name='EvDate' class='form-control' required max="2022-01-01" min="2010-01-01" />
+         </div>   
         <!-- name field -->
-        <tr>
-            <td>Shoot Name</td>
-            <td><input type='text' name='EvName' class='form-control' required /></td>
-        </tr>
-        <tr>
-            <td>Shoot Rules  </td>
-             <td><select onChange="populateType('evrules','evtypes');" id="evrules" name='EvOrg' class='form-control' required>
+        <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text" id="evprepend">Shoot Name</label>
+           </div>
+            <input type='text' id="evname" name='EvName' class='form-control' aria-describedby="evpreend" required />
+        </div>  
+          
+        <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text">Shoot Rules</label>
+            </div>
+             <select onChange="populateType('evrules','evtypes');" id="evrules" name='EvOrg' class='form-control' required>
                 <option value="">...Select</option>
                 <option value="AGB">AGB</option>
                 <option value="WA">WA</option>
                 <option value="Training">Training</option>
-              </select></td>
-        </tr>
-         <tr>
-            <td>Event Type</td>
-            <td><select id="evtypes"  onChange="populateRound('evrules','evtypes','evround');" name='EvDiscipline' class='form-control' required>
+              </select>
+        </div>
+        <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text">Event Type</label>
+            </div>
+           <select id="evtypes"  onChange="populateRound('evrules','evtypes','evround');" name='EvDiscipline' class='form-control' required>
                 <option id="select" value="">...Select</option>
-                          
-                </select></td>
-        </tr>
-        <tr>
-            <td>Shoot Round</td>
-            <td><select name='EvRound'  id="evround" class='form-control' required >
+                       
+                </select>
+        </div>
+        
+         <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text">Shoot Round</label>
+            </div>
+           <select name='EvRound'  id="evround" class='form-control' required >
                 <option id="select1" selected value="">...Select</option>
                           
-              </select></td>
-        </tr>
+              </select>
+        </div>
         <!-- price field -->
         
  
         <!-- description field -->
-       <tr>
-            <td>Event Level</td>
-             <td><select name='EvLevel' class='form-control' required>
+  <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text">Event Level</label>
+            </div>
+            <select name='EvLevel' class='form-control' required>
                 <option value="">...Select</option>
                 <option value="International">International</option>
                 <option value="National">National</option>
                 <option value="Regional">Regional</option>
                 <option value="County">County</option>
                 <option value="Club">Club</option>
-              </select></td>
-        </tr>
+              </select>
+        </div>
          
-          <tr>
-            <td>Optional Event Information</td>
-            <td><select name='EvOptional' class='form-control' >
+          <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text">Optional Event Information</label>
+            </div>
+           <select name='EvOptional' class='form-control' >
              <option value="">...Select</option>
              <option value="H2H">Head to Head event</option>
-             </select></td>
+             </select>
                
                
-        </tr>
-          <tr>
-            <td>Event Status</td>
-         
-             <td><select name='EvStatus' class='form-control' required>
+        </div>
+           <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text">Event Status</label>
+         </div>
+             <select name='EvStatus' class='form-control' required>
                 <option value="">...Select</option>
                 <option value="WRS">World Record Status / Arrowhead</option>
                 <option value="UKRS">UK Record Status / Tassel Award</option>
                 <option value="Non-Record">Non-Record Status</option>
-              </select></td>
-        </tr>
-          <tr>
-            <td>Event Role</td>
-            <td><select name='EvRole' class='form-control' required>
+              </select>
+        </div>
+          <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text">Event Role</label>
+            </div>
+            
+            <select name='EvRole' class='form-control' required>
                 <option value="">...Select</option>
                 <option value="COJ">Chair of Judges</option>
                 <option value="DOS">Director of Shooting</option>
                 <option value="Judge">Judge / Field Captain</option>
                 <option value="Trainer">Trainer</option>
                 <option value="Attendee">Attendee</option>
-              </select></td>
-        </tr>
+              </select>
+        </div>
  
         <!-- categories 'select' field -->
        
         <!-- button to submit form -->
-        <tr>
-            <td></td>
-            <td>
+     <div>
+          
+            <div>
                 <button type='submit' class='btn btn-primary'>
                     <span class='glyphicon glyphicon-plus'></span> Create Shoot Entry
                 </button>
-            </td>
-        </tr>
+            </div>
+      </div>
  
-    </table>
+
 </form>
 
   
@@ -175,7 +188,7 @@ $(document).ready(function(){
                         optionArray = ["720|WA 70/60/50","2x720|Double WA 70/60/50" ,"WA1440|1440 and Metrics I-V","2x1440/Metrics|Double 1440 and Metrics I-V","900|WA900","ClubShoot|Club Shoot / Custom Round"];
                     }
                     else if(evtype.value == "TGTIndoor"){
-                        optionArray = ["WA18|WA 18","WA25|WA 25","Double18|Double 18m","Double25|Double 25m","ClubShoot|Club Shoot / Custom Round"];
+                        optionArray = ["WA18|WA 18","WA25|WA 25","WACombined|WA Combined Round","Double18|Double 18m","Double25|Double 25m","ClubShoot|Club Shoot / Custom Round"];
                     }
                        else if(evtype.value == "Field"){
                         optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","ClubShoot|Club Shoot / Custom Round"];
@@ -237,7 +250,7 @@ $(document).ready(function(){
             changePageTitle("Create Shoot");
         });
 
-    });
+
 
 // will run if create shootrecords form was submitted
     $(document).on('submit', '#create-shootrecords-form', function(){
@@ -253,10 +266,20 @@ $(document).ready(function(){
             success : function(result) {
                 // shootrecords was created, go back to products list
                 showProducts();
+                $("#flash").addClass("alert alert-success");
+                var success_html=`<strong>Shoot Added!</strong> You have Successfully Submitted your Shoot information.
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+`;
+                $("#flash").html(success_html);
+
             },
             error: function(xhr, resp, text) {
                 // show error to console
                 console.log(xhr, resp, text);
+
+                $("#flash").addClass("alert alert-primary");
             }
 
 

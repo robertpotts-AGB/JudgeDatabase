@@ -63,7 +63,12 @@ $(document).ready(function(){
                 <option value="Worcester">Worcester</option>
                 <option value="WA18">WA 18 Meter Round</option>
                 <option value="WA25">WA 25 Meter Round</option>
+                <option value="WACombined">WA Combined Round</option>
                 <option value="Portsmouth">Portsmouth</option>
+                <option value="Bray1">Bray 1</option>
+                 <option value="Bray2">Bray 2</option>
+                 <option value="Stafford">Stafford</option>
+                
                 <option value="Training">Training</option>
               </select></td>
         </tr>
@@ -122,7 +127,7 @@ $(document).ready(function(){
         </tr>
         <tr>
             <td>Optional</td>
-            <td><textarea name='EvOptional' class='form-control' required>` + optional + `</textarea></td>
+            <td><textarea name='EvOptional' class='form-control'>` + optional + `</textarea></td>
         </tr>
         
        
