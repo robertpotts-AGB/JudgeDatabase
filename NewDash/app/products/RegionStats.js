@@ -33,7 +33,6 @@ function showJLOStats() {
                     borderColor: '#46d5f1',
                     hoverBackgroundColor: '#CCCCCC',
                     hoverBorderColor: '#666666',
-                    barPercentage:'3%',
                     data: orgtotal
                 }
             ]
@@ -43,6 +42,7 @@ function showJLOStats() {
 
         var barGraph = new Chart(graphTarget, {
             type: 'bar',
+            barPercentage:'3%',
             data: chartdata
         });
     });
