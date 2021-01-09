@@ -33,6 +33,7 @@ function showJLOStats() {
                     borderColor: '#46d5f1',
                     hoverBackgroundColor: '#CCCCCC',
                     hoverBorderColor: '#666666',
+                    barPercentage:3,
                     data: orgtotal
                 }
             ]
