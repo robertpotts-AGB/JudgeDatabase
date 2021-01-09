@@ -42,7 +42,7 @@ function showJLOStats() {
 
         var barGraph = new Chart(graphTarget, {
             type: 'bar',
-            options:{scales:{y:{suggestedMin:50,suggestedMax:100}}},
+            options:{scales:{y:{min:50,max:300,ticks:{stepSize:50}}}},
             data: chartdata
         });
     });
