@@ -38,12 +38,26 @@ function showJLOStats() {
             ]
         };
 
+        var chartoptions={
+            scales: {
+                y:{
+                    max: 300,
+                    min: 50,
+                    ticks:{
+                        stepSize:50
+                    }
+                }
+            }
+
+        };
+
         var graphTarget = $("#myChart");
 
         var barGraph = new Chart(graphTarget, {
             type: 'bar',
-            options:{scales:{y:{min:50,max:300,ticks:{stepSize:50}}}},
-            data: chartdata
+            data: chartdata,
+            options:chartoptions
+
         });
     });
 }
