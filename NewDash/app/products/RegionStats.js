@@ -40,13 +40,13 @@ function showJLOStats() {
 
         var chartoptions={
             scales: {
-                yAxes:{
+                yAxes:[{
                     max: 300,
                     min: 50,
                     ticks:{
                         stepSize:50
                     }
-                }
+                }]
             }
 
         };
