@@ -39,6 +39,7 @@ function showJLOStats() {
         };
 
         var chartoptions={
+            responsive: false,
             scales: {
                 yAxes:[{
                     max: 300,
