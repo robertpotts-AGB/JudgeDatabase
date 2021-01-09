@@ -13,7 +13,7 @@ $(document).ready(function(){
 // function to show list of products
 function showJLOStats() {
 // get list of products from the API
-    $.getJSON("/JudgeDatabase/api/shootrecords/JLOCalcs.php", function (data) {
+    $.post("/JudgeDatabase/api/shootrecords/GraphCalcs.php", function (data) {
 // html for listing products
         console.log(data);
         var evorg = [];
@@ -38,7 +38,7 @@ function showJLOStats() {
             ]
         };
 
-        var graphTarget = $("#page-content");
+        var graphTarget = $("#myChart");
 
         var barGraph = new Chart(graphTarget, {
             type: 'bar',
