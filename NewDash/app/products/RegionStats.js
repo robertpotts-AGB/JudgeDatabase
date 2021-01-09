@@ -28,7 +28,7 @@ function showJLOStats() {
             labels: evorg,
             datasets: [
                 {
-                    label: 'Student Marks',
+                    label: 'Organisation',
                     backgroundColor: '#49e2ff',
                     borderColor: '#46d5f1',
                     hoverBackgroundColor: '#CCCCCC',
