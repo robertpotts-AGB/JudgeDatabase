@@ -68,6 +68,7 @@ if(!isset($_SESSION['username'])){
                    <a href="#"class="dropdown-item"><span class=J08-view-button>Regional J08</span></a>
                    <a href="#"class="dropdown-item"><span class=J08-download-button>Regional J08 Download</span></a>
                    <a href="#"class="dropdown-item"><span class=upload-JLO-button>JLO J07 Uploader</span></a>
+                   <a href="#"class="dropdown-item"><span class=RegionStats-button>Regional Graphs (Beta)</span></a>
                       
    
                 </div>
@@ -149,5 +150,6 @@ if(!isset($_SESSION['username'])){
 <script src="app/products/J08View.js"></script>
 <script src="app/products/upload-JLO.js"></script>
 <script src="app/products/Read-Level.js"></script>
+<script src="app/products/RegionStats.js"></script>
 </body>
 </html>
