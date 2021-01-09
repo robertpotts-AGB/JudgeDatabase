@@ -40,7 +40,7 @@ function showJLOStats() {
 
         var chartoptions={
             scales: {
-                y:{
+                yAxes:{
                     max: 300,
                     min: 50,
                     ticks:{
