@@ -42,7 +42,7 @@ function showJLOStats() {
 
         var barGraph = new Chart(graphTarget, {
             type: 'bar',
-            barPercentage:'3%',
+            options:{scales:{y:{suggestedMin:50,suggestedMax:100}}},
             data: chartdata
         });
     });
