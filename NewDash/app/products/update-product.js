@@ -56,6 +56,7 @@ $(document).ready(function(){
                 <option value="Metrics">Metrics I-V</option>
                 <option value="American">American</option>
                 <option value="Albion/Windsors">St George/Albion/Windsors</option>
+                <option value="Warwicks">Warwicks</option>
                 <option value="Stafford">Stafford</option>
                 <option value="Vegas">Vegas</option>
                 <option value="Short Metrics">Short Metrics</option>
