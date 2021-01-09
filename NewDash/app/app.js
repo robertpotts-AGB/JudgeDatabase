@@ -8,6 +8,8 @@ $(document).ready(function(){
                 <h1 id='page-title' class="card card-body bg-light" >My Shoots</h1>
             </div>
             <div id='page-content'></div>
+            <canvas id="myChart" width="400" height="400"></canvas>
+
             <div class='container'>
             <!-- this is where the contents will be shown. -->
             <table>
