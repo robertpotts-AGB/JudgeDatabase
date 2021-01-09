@@ -206,7 +206,7 @@ $(document).ready(function(){
                     else if(evrule.value == "AGB")
                     { 
                         if(evtype.value == "TGTOutdoor"){
-                        optionArray = ["York/Hereford/Bristols|York/Hereford/Bristols","Nationals|Nationals","Metrics|Metrics I-V","American|American","Albion/Windsors|St George/Albion/Windsors","Warwicks|Warwicks","Short Metrics|Short Metrics","Long Metrics|Long Metrics","ClubShoot|Club Shoot / Custom Round"];
+                        optionArray = ["York/Hereford/Bristols|York/Hereford/Bristols","Nationals|Nationals","Metrics|Metrics I-V","American|American","Albion/Windsors|St George/Albion/Windsors","Warwicks|Warwicks","Westerns|Westerns","Short Metrics|Short Metrics","Long Metrics|Long Metrics","ClubShoot|Club Shoot / Custom Round"];
                     }
                     else if(evtype.value == "TGTIndoor"){
                         optionArray = ["Stafford|Stafford","Portsmouth|Portsmouth","Bray1|Bray 1","Bray2|Bray 2","Worcester|Worcester","Vegas|Vegas","ClubShoot|Club Shoot / Custom Round"];

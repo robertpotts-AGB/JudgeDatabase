@@ -53,6 +53,7 @@ $(document).ready(function(){
                 <option value="2x720"> Double 70/60/50 Meter round</option>
                 <option value="York/Hereford/Bristols">York/Hereford/Bristols</option>
                  <option value="Nationals">Nationals</option>
+                 <option value="Westerns">Westerns</option>
                 <option value="Metrics">Metrics I-V</option>
                 <option value="American">American</option>
                 <option value="Albion/Windsors">St George/Albion/Windsors</option>
