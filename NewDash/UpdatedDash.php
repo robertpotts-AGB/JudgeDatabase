@@ -109,7 +109,7 @@ if(!isset($_SESSION['username'])){
             <a href="app/products/datechange.php"> Showing shoots for <?php echo $_SESSION["ShYear"] ?> </a>
             <select name="CurrYear" onchange="YearChange(this.value)">
                 <option value="<?php echo $_SESSION["ShYear"] ?>"><?php echo $_SESSION["ShYear"] ?></option>
-                <option value="<?php date("Y") ?>"><?php echo date("Y") ?></option>
+                <option value="<?php echo date("Y") ?>"><?php echo date("Y") ?></option>
                 <?php
                 for($i = 2000 ; $i < date('Y'); $i++){
                     echo "<option>$i</option>";
