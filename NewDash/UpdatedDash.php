@@ -107,10 +107,10 @@ if(!isset($_SESSION['username'])){
             </div>
         <div>
             <a href="app/products/datechange.php"> Showing shoots for <?php echo $_SESSION["ShYear"] ?> </a>
-            <select name="CurrYear" onchange="YearChange()">
+            <select name="CurrYear" onchange="YearChange(this.value)">
                 <option value="<?php echo $_SESSION["ShYear"] ?>"><?php echo $_SESSION["ShYear"] ?></option>
                 <?php
-                for($i = 1990 ; $i < date('Y'); $i++){
+                for($i = 2000 ; $i < date('Y'); $i++){
                     echo "<option>$i</option>";
                 }
                 ?>
@@ -134,8 +134,20 @@ if(!isset($_SESSION['username'])){
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <!-- bootstrap JavaScript -->
-<script>function YearChange()
-    var x = document.getElementById("CurrYear").value;
+<script>function YearChange(value){
+
+        $.ajax({
+            type: "POST",
+            url: '/products/yearchange.php', // change url as your
+            data: 'year=' + value,
+            dataType: 'json',
+            success: function (data) {
+
+            }
+        });
+
+    }
+
 
 
 </script>
