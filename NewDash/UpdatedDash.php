@@ -106,7 +106,7 @@ if(!isset($_SESSION['username'])){
                 <span class="navbar-text"> In Current grade since:</span><span><p> <?php echo $_SESSION["LevSince"]?> </p> </span>
             </div>
         <div>
-            <a href="app/products/datechange.php"> Showing shoots for <?php echo $_SESSION["ShYear"] ?> </a>
+            <a href="app/products/datechange.php"> Showing shoots for:</a>
             <select name="CurrYear" onchange="YearChange(this.value)">
                 <option value="<?php echo $_SESSION["ShYear"] ?>"><?php echo $_SESSION["ShYear"] ?></option>
                 <option value="<?php echo date("Y") ?>"><?php echo date("Y") ?></option>
