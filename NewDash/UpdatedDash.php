@@ -109,6 +109,7 @@ if(!isset($_SESSION['username'])){
             <a href="app/products/datechange.php"> Showing shoots for <?php echo $_SESSION["ShYear"] ?> </a>
             <select name="CurrYear" onchange="YearChange(this.value)">
                 <option value="<?php echo $_SESSION["ShYear"] ?>"><?php echo $_SESSION["ShYear"] ?></option>
+                <option value="<?php date("Y") ?>"><?php date("Y") ?></option>
                 <?php
                 for($i = 2000 ; $i < date('Y'); $i++){
                     echo "<option>$i</option>";
@@ -142,6 +143,7 @@ if(!isset($_SESSION['username'])){
             data: 'year=' + value,
             dataType: 'json',
             success: function (data) {
+                location.reload();
 
             }
         });
