@@ -107,6 +107,14 @@ if(!isset($_SESSION['username'])){
             </div>
         <div>
             <a href="app/products/datechange.php"> Showing shoots for <?php echo $_SESSION["ShYear"] ?> </a>
+            <select name="CurrYear" onchange="YearChange()">
+                <option value="<?php echo $_SESSION["ShYear"] ?>"><?php echo $_SESSION["ShYear"] ?></option>
+                <?php
+                for($i = 1990 ; $i < date('Y'); $i++){
+                    echo "<option>$i</option>";
+                }
+                ?>
+            </select>
 
 
 
@@ -126,7 +134,11 @@ if(!isset($_SESSION['username'])){
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <!-- bootstrap JavaScript -->
+<script>function YearChange()
+    var x = document.getElementById("CurrYear").value;
 
+
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
