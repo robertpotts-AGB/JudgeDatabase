@@ -80,14 +80,11 @@ if(!isset($_SESSION['username'])){
                     Archery GB Admin
                 </a>
                 <div class="dropdown-menu" aria-labelledby="JLODropdownMenuLink">
-                    <a href="#"class="dropdown-item"><span class=readJLO-products-button>Regional Judge Records</span></a>
-                    <a href="#"class="dropdown-item"><span class=JLOExport-shootrecords-button>Export All Records</span></a>
-                   <a href="#"class="dropdown-item"><span class=JLOstats-products-button>Statistics for the Region</span></a>
-                   <a href="#"class="dropdown-item"><span class=J08-view-button>Regional J08</span></a>
-                   <a href="#"class="dropdown-item"><span class=J08-download-button>Regional J08 Download</span></a>
-                   <a href="#"class="dropdown-item"><span class=upload-JLO-button>JLO J07 Uploader</span></a>
-                   <a href="#"class="dropdown-item"><span class=RegionStats-button>Regional Graphs (Beta)</span></a>
-                      
+                   <a href="#"class="dropdown-item"><span class=NatJ08-view-button>National J08</span></a>
+                   <a href="#"class="dropdown-item"><span class=NatJ08-download-button>National J08 Download</span></a>
+                   <a href="#"class="dropdown-item"><span class=upload-JLO-button>J07 Uploader</span></a>
+                   <a href="#"class="dropdown-item"><span class=NationalStats-button>National Graphs (Beta)</span></a>
+                   <a href="#"class="dropdown-item"><span class=ManageJudges-button>Manage Judges</span></a>   
    
                 </div>
             </li>';
