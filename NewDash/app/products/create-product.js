@@ -212,7 +212,7 @@ $(document).ready(function(){
                         optionArray = ["Stafford|Stafford","Portsmouth|Portsmouth","Bray1|Bray 1","Bray2|Bray 2","Worcester|Worcester","Vegas|Vegas","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "Field"){
-                        optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","ClubShoot|Club Shoot / Custom Round"];
+                        optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","CourseInspection|Field Check Day","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "3D"){
                         optionArray = ["3D|3D","ClubShoot|Club Shoot / Custom Round"];
