@@ -1,2 +1,6 @@
 <?php
-mail("robert.potts@archerygb.org","Test from Judge Site","Test","From:robert.potts@archerygb.org");
+$To="robert.potts@archerygb.org" ;
+$subject="Test from Judge Site";
+$text="Test";
+$headers="From: robert.potts@archerygb.org";
+mail($To,$subject,$text,$headers);
