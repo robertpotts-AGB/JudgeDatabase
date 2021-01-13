@@ -74,6 +74,24 @@ if(!isset($_SESSION['username'])){
                 </div>
             </li>';
             } ?>
+            <?php if ($_SESSION["isAdmin"] == 1){
+                echo' <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="JLODropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Archery GB Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="JLODropdownMenuLink">
+                    <a href="#"class="dropdown-item"><span class=readJLO-products-button>Regional Judge Records</span></a>
+                    <a href="#"class="dropdown-item"><span class=JLOExport-shootrecords-button>Export All Records</span></a>
+                   <a href="#"class="dropdown-item"><span class=JLOstats-products-button>Statistics for the Region</span></a>
+                   <a href="#"class="dropdown-item"><span class=J08-view-button>Regional J08</span></a>
+                   <a href="#"class="dropdown-item"><span class=J08-download-button>Regional J08 Download</span></a>
+                   <a href="#"class="dropdown-item"><span class=upload-JLO-button>JLO J07 Uploader</span></a>
+                   <a href="#"class="dropdown-item"><span class=RegionStats-button>Regional Graphs (Beta)</span></a>
+                      
+   
+                </div>
+            </li>';
+            } ?>
 
         </ul>
 
@@ -109,12 +127,12 @@ if(!isset($_SESSION['username'])){
             <a href="app/products/datechange.php"> Showing shoots for:</a>
             <select name="CurrYear" onchange="YearChange(this.value)">
                 <option value="<?php echo $_SESSION["ShYear"] ?>"><?php echo $_SESSION["ShYear"] ?></option>
-                <option value="<?php echo date("Y") ?>"><?php echo date("Y") ?></option>
                 <?php
                 for($i = 2010 ; $i < date('Y'); $i++){
                     echo "<option>$i</option>";
                 }
                 ?>
+                <option value="<?php echo date("Y") ?>"><?php echo date("Y") ?></option>
             </select>
 
 
