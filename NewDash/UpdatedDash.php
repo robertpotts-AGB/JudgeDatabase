@@ -138,7 +138,7 @@ if(!isset($_SESSION['username'])){
 
         $.ajax({
             type: "POST",
-            url: '/products/yearchange.php', // change url as your
+            url: '../products/yearchange.php', // change url as your
             data: 'year=' + value,
             dataType: 'json',
             success: function (data) {
