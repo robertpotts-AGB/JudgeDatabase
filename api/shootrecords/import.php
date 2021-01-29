@@ -100,7 +100,7 @@ if (isset($_POST["btn_upload"])) {
                         }
                         $AGBNUMBER = ($_SESSION["agbID"]);
                         //convert date to Import Date
-                        $ShootDate=DateTime::createFromFormat('n/j/Y',$column[0]);
+                        $ShootDate=DateTime::createFromFormat('m/d/Y',$column[0]); 
                         $importDate = $ShootDate->format('Y-m-d');
 
                         $stmt->bindParam(':AGB', $AGBNUMBER);
