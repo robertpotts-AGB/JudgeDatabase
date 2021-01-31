@@ -125,7 +125,7 @@ if(!isset($_SESSION['username'])){
             <select name="CurrYear" onchange="YearChange(this.value)">
                 <option value="<?php echo $_SESSION["ShYear"] ?>"><?php echo $_SESSION["ShYear"] ?></option>
                 <?php
-                for($i = 2010 ; $i < date('Y'); $i++){
+                for($i = date('Y') ; $i = 2010; $i--){
                     echo "<option>$i</option>";
                 }
                 ?>
