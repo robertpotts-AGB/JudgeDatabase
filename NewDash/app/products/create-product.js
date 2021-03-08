@@ -191,7 +191,7 @@ $(document).ready(function(){
                         optionArray = ["WA18|WA 18","WA25|WA 25","WACombined|WA Combined Round","Double18|Double 18m","Double25|Double 25m","ClubShoot|Club Shoot / Custom Round"];
                     }
                        else if(evtype.value == "Field"){
-                        optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","ClubShoot|Club Shoot / Custom Round"];
+                        optionArray = ["FieldCheck|Field Check Day","MixedUM|Mixed Unmarked / Marked","Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "3D"){
                         optionArray = ["3D|3D","ClubShoot|Club Shoot / Custom Round"];
@@ -212,7 +212,7 @@ $(document).ready(function(){
                         optionArray = ["Stafford|Stafford","Portsmouth|Portsmouth","Bray1|Bray 1","Bray2|Bray 2","Worcester|Worcester","Vegas|Vegas","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "Field"){
-                        optionArray = ["Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","CourseInspection|Field Check Day","ClubShoot|Club Shoot / Custom Round"];
+                        optionArray = ["FieldCheck|Field Check Day","MixedUM|Mixed Unmarked / Marked","Unmarked|Unmarked","Marked|Marked","12+12|12+12","24+24|24+24","CourseInspection|Field Check Day","ClubShoot|Club Shoot / Custom Round"];
                     }
                       else if(evtype.value == "3D"){
                         optionArray = ["3D|3D","ClubShoot|Club Shoot / Custom Round"];
