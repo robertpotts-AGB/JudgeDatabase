@@ -70,6 +70,14 @@ $(document).ready(function(){
                 <option value="Bray1">Bray 1</option>
                  <option value="Bray2">Bray 2</option>
                  <option value="Stafford">Stafford</option>
+                 
+                  <option value="FieldCheck">Field Check Day</option>
+                   <option value="MixedUM">Mixed Unmarked / Marked</option>
+                    <option value="Unmarked">Unmarked</option>
+                     <option value="Marked">Marked</option>
+                      <option value="12+12">12+12</option>
+                        <option value="24+24">24+24</option>
+                      
                 
                 <option value="Training">Training</option>
               </select></td>
